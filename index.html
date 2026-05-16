@@ -1,1 +1,349 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbeque: The Smoke House | Where Smoke Meets Soul</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Audio Branding -->
+    
+
+    <div class="smoke-container">
+        <canvas id="smoke-canvas"></canvas>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#hero" class="logo"><img src="572379793_17849853435588773_6050970174429049127_n.jpg" alt="The Smoke House Logo"
+                    class="logo-img"></a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            
+            
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg parallax-bg">
+                <div class="hero-slideshow">
+                    <img src="Screenshot 2026-03-06 224441.png" alt="Barbecue Scene 1" class="hero-slide active">
+                    <img src="Screenshot 2026-03-06 224610.png" alt="Barbecue Scene 2" class="hero-slide">
+                    <img src="Screenshot 2026-03-06 224840.png" alt="Barbecue Scene 3" class="hero-slide">
+                </div>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title fade-up">Where Smoke <span class="text-accent">Meets Soul</span></h1>
+                <p class="hero-subtitle fade-up delay-1">Experience Jorhat's premier barbeque destination. From the
+                    legendary Smoked Pineapple to the warmth of our world-class hospitality.</p>
+                <button class="btn-primary cta-glow fade-up delay-2">Book a Table</button>
+            </div>
+        </section>
+        <!-- Signature Platter Gallery -->
+        <section id="gallery" class="platter-section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title">Signature Platters</h2>
+                    <p class="section-desc">A visual feast of our most celebrated creations.</p>
+                </div>
+
+                <div class="masonry-grid">
+                    <div class="masonry-item large fade-up">
+                        <img src="Screenshot 2026-03-07 003319.png" alt="The Barbecue Chicken Platter"
+                            class="gallery-img">
+                        <div class="item-overlay">
+                            <h3>The Barbecue Chicken Platter</h3>
+                        </div>
+                    </div>
+                    <div class="masonry-item fade-up delay-1">
+                        <img src="Screenshot 2026-03-07 001857.png" alt="Satay" class="gallery-img">
+                        <div class="item-overlay">
+                            <h3>Smoked Satay</h3>
+                        </div>
+                    </div>
+                    <div class="masonry-item fade-up delay-2">
+                        <img src="Screenshot 2026-03-06 225153.png" alt="Starters" class="gallery-img">
+                        <div class="item-overlay">
+                            <h3>Signature Starters</h3>
+                        </div>
+                    </div>
+                    <div class="masonry-item wide fade-up delay-1">
+                        <img src="Screenshot 2026-03-07 002337.png" alt="Mutton BBQ" class="gallery-img">
+                        <div class="item-overlay">
+                            <h3>Slow-Cooked Mutton</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title">The Smoke House Menu</h2>
+                    <p class="section-desc">Curated by our pitmasters, classified by smoke intensity.</p>
+                </div>
+
+                <div class="smoke-intensity-tabs fade-up">
+                    <button class="intensity-tab active" data-intensity="all">All Menu</button>
+                    <button class="intensity-tab" data-intensity="light">Light Smoke</button>
+                    <button class="intensity-tab" data-intensity="medium">Medium Smoke</button>
+                    <button class="intensity-tab" data-intensity="heavy">Heavy Smoke</button>
+                </div>
+
+                <div class="menu-grid" id="menu-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall of Love -->
+         <section id="reviews" class="reviews-section">
+        <div class="reviews-grid">
+
+    <!-- Review 1 -->
+    <div class="review-card glass-card fade-up">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">S</div>
+                <div class="reviewer-info">
+                    <h4>Sarangapani Baruah</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "Had a fabulous evening. The ambience and service were excellent.
+            A wonderful place to enjoy with friends and family."
+        </p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card glass-card fade-up delay-1">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">P</div>
+                <div class="reviewer-info">
+                    <h4>Primrose</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "The place is like a dupe of Barbeque Nation. The ambience is really pretty,
+            food is great and the staff were very welcoming."
+        </p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card glass-card fade-up delay-2">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">A</div>
+                <div class="reviewer-info">
+                    <h4>Aditya Neog</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★☆</div>
+        </div>
+        <p class="review-text">
+            "Good buffet experience overall. The place has good ambience and food.
+            Price changes recently but still a nice place to dine."
+        </p>
+    </div>
+
+    <!-- Review 4 -->
+    <div class="review-card glass-card fade-up">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">L</div>
+                <div class="reviewer-info">
+                    <h4>Latifa Begum</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "Awesome experience! Very nice service by all staff.
+            Our children loved every food item, especially the sweet corn
+            and smoked pineapple."
+        </p>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="review-card glass-card fade-up delay-1">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">S</div>
+                <div class="reviewer-info">
+                    <h4>Somir Kalita</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "Perfect place for party celebrations with nice hospitality.
+            Special thanks to service manager Mr. Abhoyob."
+        </p>
+    </div>
+
+    <!-- Review 6 -->
+    <div class="review-card glass-card fade-up delay-2">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">J</div>
+                <div class="reviewer-info">
+                    <h4>Jahnob Jyoti Sarmah</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "Absolutely delightful food and great service.
+            Every dish was packed with flavor and beautifully presented."
+        </p>
+    </div>
+
+    <!-- Review 7 -->
+    <div class="review-card glass-card fade-up">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">D</div>
+                <div class="reviewer-info">
+                    <h4>Dr Gitashree Darabdhara</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "The atmosphere is excellent. The meals were great in quality and the service
+            was wonderful. Special mention to Abhay for the hospitality."
+        </p>
+    </div>
+
+    <!-- Review 8 -->
+    <div class="review-card glass-card fade-up delay-1">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">S</div>
+                <div class="reviewer-info">
+                    <h4>Sarfaraz Haque</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "We celebrated my parents’ anniversary here and everything was perfect.
+            Delicious food, lovely ambience and friendly staff."
+        </p>
+    </div>
+
+    <!-- Review 9 -->
+    <div class="review-card glass-card fade-up delay-2">
+        <div class="review-header">
+            <div class="reviewer">
+                <div class="avatar">P</div>
+                <div class="reviewer-info">
+                    <h4>Parak Ranjit</h4>
+                    <span class="verified">Verified Google Review</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+        </div>
+        <p class="review-text">
+            "Amazing place! If you want to enjoy time with your partner
+            or friends, this place is perfect."
+        </p>
+    </div>
+
+</div>
+</section>
+        <!-- Vibe Section -->
+        <section id="vibe" class="vibe-section">
+            <div class="container text-center fade-up">
+                <h2 class="section-title">Breathtaking Interior</h2>
+                <div class="video-container glass-card" id="vibe-video-container">
+                    <img src="Screenshot 2026-03-07 012104.png" alt="Restaurant Interior Walkthrough"
+                        class="video-poster" id="vibe-poster">
+                    <button class="play-btn cta-glow" id="vibe-play-btn">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2"
+                            fill="white" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                    <div class="video-overlay" id="vibe-overlay">Walkthrough</div>
+                    <video id="vibe-video" class="rotated-video" controls>
+                        <source
+                            src="SaveGram.App_AQOv29p8T7o5-sIzNro1lKqoRyfJdPrw8Irqjb8KugTWUmUF9QpUfkt2v1rOKt_3IlcXf2G5m5Nbwkdhk6iZUg_qO7rrGRubQpLw9Ec.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Custom Controls -->
+                    <div class="custom-controls" id="vibe-controls">
+                        <button id="vibe-play-pause" class="control-btn">
+                            <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                        </button>
+                        <input type="range" id="vibe-seek" value="0" step="0.1">
+                        <span id="vibe-time" class="time-display">0:00 / 0:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>The Smoke House</h2>
+                    <p>Where Fire Meets Flavor.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#reserve">Reservations</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Barbeque: The Smoke House • Jorhat, Assam. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

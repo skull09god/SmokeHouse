@@ -79,6 +79,12 @@ function closeViewer(){
   viewer.classList.remove('open');
   viewer.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('no-scroll');
+
+  // Go back to menu section without reloading the page
+  document.getElementById('sections').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 }
 
 function changeSection(step){

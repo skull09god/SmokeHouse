@@ -282,20 +282,37 @@ button { font: inherit; }
   max-height: 94vh;
 }
 .close-btn {
-  position: absolute;
-  right: -10px;
-  top: -12px;
-  z-index: 5;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255,255,255,.28);
+  position: fixed;
+  top: 22px;
+  right: 28px;
+  z-index: 9999;
+
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+
+  border: 2px solid var(--accent-2);
   background: #111;
-  color: var(--text);
-  font-size: 28px;
+  color: var(--accent-2);
+
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  transition: 0.25s ease;
 }
-.close-btn:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+.close-btn:hover {
+  background: var(--accent-2);
+  color: #111;
+  transform: scale(1.08);
+}
 .viewer-toolbar {
   display: flex;
   justify-content: center;

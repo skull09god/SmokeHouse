@@ -491,3 +491,102 @@ footer {
   .dish-row { grid-template-columns: 1fr; gap: 6px; }
   .paper-image h2 { font-size: 38px; }
 }
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+   Section Viewer + X Button
+========================= */
+
+@media (max-width: 768px) {
+
+  .section-viewer {
+    padding: 12px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .viewer-panel {
+    width: 100%;
+    max-height: none;
+    margin-top: 55px;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    z-index: 99999;
+  }
+
+  .viewer-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(16, 16, 15, 0.95);
+    padding: 10px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+
+  .book-btn {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  .section-book {
+    height: auto;
+    min-height: auto;
+    perspective: none;
+  }
+
+  .menu-paper {
+    position: relative;
+    display: block;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .turning-paper {
+    display: none;
+  }
+
+  .paper-image {
+    min-height: 220px;
+    padding: 24px;
+  }
+
+  .paper-image h2 {
+    font-size: 36px;
+  }
+
+  .paper-image p {
+    font-size: 14px;
+  }
+
+  .paper-menu {
+    padding: 22px 18px;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .paper-top h3 {
+    font-size: 34px;
+  }
+
+  .dish-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .dish-row h4 {
+    font-size: 23px;
+  }
+
+  .dish-row strong {
+    font-size: 16px;
+  }
+}

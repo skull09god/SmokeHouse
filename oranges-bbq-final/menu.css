@@ -590,3 +590,408 @@ footer {
     font-size: 16px;
   }
 }
+
+
+/* =====================================================
+   Screenshot-style menu viewer + smooth no-lag flip
+   Added for full-screen menu book design
+===================================================== */
+.section-viewer {
+  padding: 34px 32px 26px;
+  background: #030303;
+}
+
+.section-viewer.open {
+  display: flex;
+}
+
+.viewer-backdrop {
+  background: rgba(0, 0, 0, 0.93);
+  backdrop-filter: none;
+}
+
+.viewer-panel {
+  width: min(1540px, 84vw);
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  position: fixed;
+  top: 38px;
+  right: 48px;
+  z-index: 10000;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 2px solid rgba(217, 164, 65, .92);
+  background: rgba(8, 8, 8, .92);
+  color: var(--accent-2);
+  font-size: 0;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 42px rgba(0,0,0,.45);
+  transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+}
+
+.close-btn::before {
+  content: "×";
+  font-size: 30px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: var(--accent-2);
+  color: #090909;
+  transform: scale(1.05);
+}
+
+.viewer-toolbar {
+  height: 78px;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--muted);
+}
+
+.viewer-toolbar strong {
+  min-width: 86px;
+  display: inline-block;
+  text-align: center;
+  color: var(--accent-2);
+  font-size: 18px;
+  letter-spacing: .16em;
+}
+
+.book-btn {
+  min-width: 145px;
+  padding: 16px 22px;
+  border-radius: 999px;
+  background: rgba(17, 17, 16, .86);
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: #e8dfd3;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+
+.book-btn:hover {
+  border-color: rgba(217, 164, 65, .7);
+  color: var(--accent-2);
+}
+
+.section-book {
+  width: 100%;
+  height: min(73vh, 720px);
+  min-height: 560px;
+  perspective: 2200px;
+  transform-style: preserve-3d;
+}
+
+.menu-paper {
+  grid-template-columns: 45% 55%;
+  background: #fff7e8;
+  box-shadow: 0 34px 100px rgba(0,0,0,.76);
+  border: 1px solid rgba(255,255,255,.16);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.current-paper {
+  z-index: 1;
+}
+
+.turning-paper {
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+.section-book.turn-next .turning-paper,
+.section-book.turn-prev .turning-paper {
+  opacity: 1;
+}
+
+.section-book.turn-next .turning-paper {
+  transform-origin: left center;
+  animation: smoothPageTurnNext .72s cubic-bezier(.56,.04,.2,1) forwards;
+}
+
+.section-book.turn-prev .turning-paper {
+  transform-origin: right center;
+  animation: smoothPageTurnPrev .72s cubic-bezier(.56,.04,.2,1) forwards;
+}
+
+@keyframes smoothPageTurnNext {
+  0% { transform: rotateY(0deg) translateZ(2px); opacity: 1; filter: brightness(1); }
+  45% { transform: rotateY(-52deg) translateZ(18px); opacity: .96; filter: brightness(.96); box-shadow: -28px 18px 58px rgba(0,0,0,.36); }
+  100% { transform: rotateY(-103deg) translateZ(10px); opacity: 0; filter: brightness(.82); box-shadow: -58px 24px 90px rgba(0,0,0,.5); }
+}
+
+@keyframes smoothPageTurnPrev {
+  0% { transform: rotateY(0deg) translateZ(2px); opacity: 1; filter: brightness(1); }
+  45% { transform: rotateY(52deg) translateZ(18px); opacity: .96; filter: brightness(.96); box-shadow: 28px 18px 58px rgba(0,0,0,.36); }
+  100% { transform: rotateY(103deg) translateZ(10px); opacity: 0; filter: brightness(.82); box-shadow: 58px 24px 90px rgba(0,0,0,.5); }
+}
+
+.paper-image {
+  padding: 48px 50px;
+  background-position: center;
+}
+
+.paper-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.65));
+  pointer-events: none;
+}
+
+.paper-image:after {
+  inset: 28px;
+  border-color: rgba(255,255,255,.18);
+}
+
+.paper-image span,
+.paper-image h2,
+.paper-image p {
+  position: relative;
+  z-index: 2;
+}
+
+.paper-image span {
+  font-size: 13px;
+  letter-spacing: .22em;
+}
+
+.paper-image h2 {
+  font-size: clamp(54px, 5.2vw, 82px);
+  margin-bottom: 16px;
+}
+
+.paper-image p {
+  max-width: 540px;
+  color: #f3dfc0;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.paper-menu {
+  padding: 54px 58px 42px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(217,164,65,.16), transparent 22%),
+    linear-gradient(180deg, #fffaf0, #f1e4ce);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(33, 26, 21, .45) rgba(33, 26, 21, .08);
+}
+
+.paper-menu::-webkit-scrollbar { width: 10px; }
+.paper-menu::-webkit-scrollbar-track { background: rgba(33, 26, 21, .08); }
+.paper-menu::-webkit-scrollbar-thumb { background: rgba(33, 26, 21, .45); border-radius: 999px; }
+
+.paper-top {
+  padding-bottom: 22px;
+  margin-bottom: 12px;
+}
+
+.paper-top h3 {
+  font-size: 56px;
+  letter-spacing: .01em;
+}
+
+.item-count {
+  padding: 10px 18px;
+  font-size: 13px;
+  letter-spacing: .16em;
+}
+
+.dish-row {
+  padding: 20px 0;
+  gap: 26px;
+}
+
+.dish-row h4 {
+  font-size: 30px;
+}
+
+.dish-row p {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.dish-row strong {
+  font-size: 22px;
+  padding-top: 4px;
+}
+
+@media (max-width: 1200px) {
+  .viewer-panel { width: min(1180px, 92vw); }
+  .paper-menu { padding: 42px 40px 34px; }
+  .paper-top h3 { font-size: 46px; }
+  .dish-row h4 { font-size: 26px; }
+  .dish-row strong { font-size: 19px; }
+}
+
+@media (max-width: 768px) {
+  .section-viewer {
+    padding: 12px;
+    align-items: flex-start;
+    overflow-y: auto;
+    background: #050505;
+  }
+
+  .viewer-backdrop {
+    background: rgba(0,0,0,.94);
+  }
+
+  .viewer-panel {
+    width: 100%;
+    max-height: none;
+    margin-top: 48px;
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .close-btn::before { font-size: 22px; }
+
+  .viewer-toolbar {
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    gap: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    background: rgba(12, 12, 12, .96);
+  }
+
+  .viewer-toolbar strong {
+    min-width: 64px;
+    font-size: 13px;
+  }
+
+  .book-btn {
+    min-width: auto;
+    padding: 10px 12px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .section-book {
+    height: auto;
+    min-height: 0;
+    perspective: none;
+  }
+
+  .menu-paper {
+    position: relative;
+    display: block;
+    min-height: auto;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .turning-paper {
+    display: none;
+  }
+
+  .section-book.mobile-swap .current-paper {
+    animation: mobilePaperSwap .24s ease-out;
+  }
+
+  @keyframes mobilePaperSwap {
+    from { opacity: .4; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .paper-image {
+    min-height: 235px;
+    padding: 28px;
+  }
+
+  .paper-image:after { inset: 18px; }
+
+  .paper-image h2 {
+    font-size: 40px;
+  }
+
+  .paper-image p {
+    font-size: 14px;
+  }
+
+  .paper-menu {
+    max-height: none;
+    overflow: visible;
+    padding: 26px 20px;
+  }
+
+  .paper-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .paper-top h3 {
+    font-size: 34px;
+  }
+
+  .dish-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 15px 0;
+  }
+
+  .dish-row h4 {
+    font-size: 24px;
+  }
+
+  .dish-row strong {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .viewer-panel { margin-top: 44px; }
+  .book-btn { padding: 9px 10px; font-size: 9px; }
+  .viewer-toolbar strong { min-width: 58px; }
+  .paper-image { min-height: 205px; padding: 22px; }
+  .paper-image h2 { font-size: 33px; }
+  .paper-top h3 { font-size: 30px; }
+}
+
+
+/* Hide navbar only when the menu section viewer is open */
+body.menu-viewer-open .navbar {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-110%);
+  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+}
+
+body:not(.menu-viewer-open) .navbar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Keep the menu viewer above everything, including the fixed navbar */
+.section-viewer {
+  z-index: 9998;
+}

@@ -73,12 +73,14 @@ function openSection(id){
   viewer.classList.add('open');
   viewer.setAttribute('aria-hidden', 'false');
   document.body.classList.add('no-scroll');
+  document.body.classList.add('menu-viewer-open');
 }
 
 function closeViewer(){
   viewer.classList.remove('open');
   viewer.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('no-scroll');
+  document.body.classList.remove('menu-viewer-open');
 
   // Go back to menu section without reloading the page
   document.getElementById('sections').scrollIntoView({
@@ -89,23 +91,42 @@ function closeViewer(){
 
 function changeSection(step){
   if(isTurning) return;
+
   const nextIndex = (activeIndex + step + menuData.length) % menuData.length;
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
   isTurning = true;
+
+  sectionBook.classList.remove('turn-next', 'turn-prev', 'mobile-swap');
+
+  if(isMobile){
+    currentPaper.innerHTML = paperTemplate(menuData[nextIndex], nextIndex);
+    activeIndex = nextIndex;
+    updateCount();
+    void sectionBook.offsetWidth;
+    sectionBook.classList.add('mobile-swap');
+
+    setTimeout(() => {
+      sectionBook.classList.remove('mobile-swap');
+      isTurning = false;
+    }, 260);
+    return;
+  }
+
+  // Correct page flip: the next page is placed below first,
+  // then the old page flips away from the top. This avoids blank/laggy flips.
   turningPaper.innerHTML = currentPaper.innerHTML;
-  sectionBook.classList.remove('turn-next', 'turn-prev');
+  currentPaper.innerHTML = paperTemplate(menuData[nextIndex], nextIndex);
+
   void sectionBook.offsetWidth;
   sectionBook.classList.add(step > 0 ? 'turn-next' : 'turn-prev');
 
   setTimeout(() => {
     activeIndex = nextIndex;
-    currentPaper.innerHTML = paperTemplate(menuData[activeIndex], activeIndex);
     updateCount();
-  }, 330);
-
-  setTimeout(() => {
     sectionBook.classList.remove('turn-next', 'turn-prev');
+    turningPaper.innerHTML = '';
     isTurning = false;
-  }, 760);
+  }, 720);
 }
 
 function updateCount(){
@@ -121,4 +142,13 @@ document.addEventListener('keydown', (event) => {
   if(event.key === 'ArrowLeft') changeSection(-1);
 });
 
+
+function preloadMenuImages(){
+  menuData.forEach(cat => {
+    const img = new Image();
+    img.src = cat.img;
+  });
+}
+
+preloadMenuImages();
 renderCategoryCards();

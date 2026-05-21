@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wall of Love | Orange's Barbeque Smoke House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="walloflove.css" />
+  <link rel="stylesheet" href="common.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.jpg">
+
+  <style>
+    body { padding-top: 95px; }
+    .navbar { font-family: Georgia, 'Times New Roman', serif; }
+    @media (max-width: 768px) { body { padding-top: 75px; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html#home" class="logo stamp-logo">
+      <img src="./assets/logo.jpg" alt="Orange's Barbeque Smoke House Logo" />
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="menu.html">Menu</a></li>
+      <li class="dropdown" id="orderDropdown">
+        <button class="dropdown-btn" type="button">Online Order ▾</button>
+        <div class="dropdown-menu">
+          <a href="https://www.zomato.com/" target="_blank">Zomato</a>
+          <a href="https://www.swiggy.com/" target="_blank">Swiggy</a>
+        </div>
+      </li>
+      <li><a href="walloflove.html">Wall of Love</a></li>
+      <li><a href="https://wa.me/919999999999?text=Hello%20Orange's%20Barbeque%20Smoke%20House%2C%20I%20want%20to%20reserve%20a%20table." target="_blank">Reserve Table</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="love-hero" id="wall-of-love">
+      <div class="love-container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Wall of Love</p>
+          <h1>Every table has a story. Every flame carries a memory.</h1>
+          <p class="hero-text">
+            At Orange Barbeque Smoke House, the experience begins with the warm glow of cane lights,
+            the aroma of smoky grills, and the joy of unlimited starters, mains, and desserts shared
+            with friends and family.
+          </p>
+          <div class="hero-actions">
+            <a href="#guest-love" class="primary-btn">Read Guest Stories</a>
+            <a href="#orange-story" class="secondary-btn">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <video class="love-video" autoplay muted loop playsinline poster="walloflove_assets/restaurant-interior-2.jpeg">
+            <source src="walloflove_assets/orange-barbeque-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="rating-card">
+            <span class="stars">★★★★★</span>
+            <strong>Guest-loved dining</strong>
+            <small>Known for ambience, hospitality, smoky flavours, and warm service.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="orange-story">
+      <div class="love-container story-grid">
+        <div class="story-image-stack">
+          <img src="walloflove_assets/restaurant-lights-1.jpeg" alt="Warm cane lights at Orange Barbeque Smoke House" class="story-img img-large" />
+          <img src="walloflove_assets/mocktails-bar.jpeg" alt="Colorful mocktails at the bar" class="story-img img-small" />
+        </div>
+
+        <div class="story-content">
+          <p class="eyebrow">The Orange Experience</p>
+          <h2>Built around food, fire, and friendly service.</h2>
+          <p>
+            Orange Barbeque Smoke House is more than a barbeque restaurant. It is a place where
+            families celebrate New Year evenings, friends gather over smoky starters, and guests
+            remember the staff who made them feel welcomed.
+          </p>
+          <p>
+            From juicy smoked wings and tender meats to peaceful interiors and colourful drinks,
+            every detail is designed to make guests slow down, enjoy the meal, and leave with a story
+            worth sharing.
+          </p>
+
+          <div class="story-points">
+            <article><span>01</span><h3>Smoky Flavours</h3><p>Authentic barbeque taste with starters, mains, and desserts made for sharing.</p></article>
+            <article><span>02</span><h3>Warm Hospitality</h3><p>Friendly staff, polite service, and a welcoming atmosphere guests talk about.</p></article>
+            <article><span>03</span><h3>Memorable Ambience</h3><p>Soft lighting, greenery, and comfortable seating for families and celebrations.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-strip" aria-label="Restaurant gallery">
+      <img src="walloflove_assets/restaurant-interior-2.jpeg" alt="Buffet and dining area" />
+      <img src="walloflove_assets/dining-corner-3.jpeg" alt="Cozy dining booth with plants" />
+      <img src="walloflove_assets/restaurant-lights-1.jpeg" alt="Decorative ceiling lights" />
+    </section>
+
+    <section class="reviews-section" id="guest-love">
+      <div class="love-container">
+        <div class="section-heading">
+          <p class="eyebrow">What guests say</p>
+          <h2>Real love from real tables.</h2>
+          <p>These guest moments capture what Orange Barbeque Smoke House is known for: delicious food, friendly service, and a space that feels good to sit in.</p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card featured-review"><div class="review-top"><span class="stars">★★★★★</span><span>5 months ago</span></div><p>“An exceptional experience from start to finish. Unlimited starters, main course, and desserts — every item served was incredibly delicious.”</p><h3>Mridusmita Bora</h3></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span>6 months ago</span></div><p>“A must visit place! A perfect combo of delicious food, great service and a soothing, peaceful environment.”</p><h3>Anamika Chauhan</h3></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span>6 months ago</span></div><p>“A top-notch spot offering authentic smoky flavours, tender meats, and excellent service for a true barbecue experience.”</p><h3>Santosh Kumar</h3></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span>3 months ago</span></div><p>“The starters, particularly the smoked wings, were incredibly juicy and fresh. The mutton was so well prepared.”</p><h3>Abhilekh Gogoi</h3></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span>4 months ago</span></div><p>“We spent New Year's Eve here. A very nice experience with welcoming atmosphere, friendly staff and impressive service.”</p><h3>Tripti Dutta</h3></article>
+          <article class="review-card"><div class="review-top"><span class="stars">★★★★★</span><span>4 months ago</span></div><p>“Very good and friendly manner. Each staff is very well mannered.”</p><h3>Anah Areya</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="love-container cta-box">
+        <div>
+          <p class="eyebrow">Join the wall</p>
+          <h2>Come for the barbeque. Stay for the memories.</h2>
+          <p>Celebrate birthdays, family dinners, office gatherings, or a simple evening out at Orange Barbeque Smoke House.</p>
+        </div>
+        <a href="https://wa.me/919999999999?text=Hello%20Orange's%20Barbeque%20Smoke%20House%2C%20I%20want%20to%20reserve%20a%20table." target="_blank" class="primary-btn">Reserve a Table</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Orange's Barbeque Smoke House</h2>
+      <p>Smoky flavours, fresh grills, and unforgettable taste.</p>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="walloflove.html">Wall of Love</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copyright">© 2026 Orange's Barbeque Smoke House. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+</body>
+</html>

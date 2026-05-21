@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Orange's Barbeque Smoke House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="stylesheet" href="common.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.jpg">
+
+  <style>
+    body { padding-top: 95px; }
+    .hero { min-height: calc(100vh - 95px); }
+    .navbar { font-family: Georgia, 'Times New Roman', serif; }
+    @media (max-width: 768px) { body { padding-top: 75px; } .hero { min-height: calc(100vh - 75px); } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html#home" class="logo stamp-logo">
+      <img src="./assets/logo.jpg" alt="Orange's Barbeque Smoke House Logo" />
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="menu.html">Menu</a></li>
+      <li class="dropdown" id="orderDropdown">
+        <button class="dropdown-btn" type="button">Online Order ▾</button>
+        <div class="dropdown-menu">
+          <a href="https://www.zomato.com/" target="_blank">Zomato</a>
+          <a href="https://www.swiggy.com/" target="_blank">Swiggy</a>
+        </div>
+      </li>
+      <li><a href="walloflove.html">Wall of Love</a></li>
+      <li><a href="https://wa.me/919999999999?text=Hello%20Orange's%20Barbeque%20Smoke%20House%2C%20I%20want%20to%20reserve%20a%20table." target="_blank">Reserve Table</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <span class="kicker">Orange's Digital Menu</span>
+      <h1>Explore every menu section like a real restaurant book.</h1>
+      <p>Choose a category card and it opens a clean flip-page menu showing only the dishes from that section.</p>
+      <div class="hero-actions">
+        <a href="#sections" class="btn primary">View Menu Sections</a>
+        <button class="btn ghost" type="button" onclick="openSection('buffet')">Today’s Buffet</button>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <span class="panel-label">Signature Buffet</span>
+      <h2>30+ Unlimited Delights</h2>
+      <div class="price-row"><span>Veg Lunch Buffet</span><strong>₹599</strong></div>
+      <div class="price-row"><span>Non-Veg Lunch Buffet</span><strong>₹699</strong></div>
+      <p>Fresh grills, Indian mains, Asian favourites and desserts.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section-wrap" id="sections">
+      <div class="section-title">
+        <span>Our Menu</span>
+        <h2>Choose Your Section</h2>
+        <p>Each box opens a dedicated flip-page view for that section only.</p>
+      </div>
+      <div class="category-grid" id="categoryCards"></div>
+    </section>
+
+    <section class="reservation-band" id="reservation">
+      <div>
+        <span class="kicker compact">Private Dining</span>
+        <h2>Group Prix-Fixe Menu</h2>
+        <p>Perfect for birthdays, family dinners and office celebrations.</p>
+      </div>
+      <a class="btn primary" href="https://wa.me/919999999999?text=Hello%20Orange's%20Barbeque%20Smoke%20House%2C%20I%20want%20to%20reserve%20a%20table." target="_blank">Reserve Table</a>
+    </section>
+  </main>
+
+  <div class="section-viewer" id="sectionViewer" aria-hidden="true">
+    <div class="viewer-backdrop" onclick="closeViewer()"></div>
+    <div class="viewer-panel" role="dialog" aria-modal="true" aria-label="Menu section viewer">
+      <button class="close-btn" type="button" onclick="closeViewer()" aria-label="Close menu">×</button>
+      <div class="viewer-toolbar">
+        <button class="book-btn" id="prevSection" type="button">‹ Previous</button>
+        <span><strong id="viewerCount">01</strong></span>
+        <button class="book-btn" id="nextSection" type="button">Next ›</button>
+      </div>
+      <div class="section-book" id="sectionBook">
+        <article class="menu-paper current-paper" id="currentPaper"></article>
+        <article class="menu-paper turning-paper" id="turningPaper"></article>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Orange's Barbeque Smoke House</h2>
+      <p>Smoky flavours, fresh grills, and unforgettable taste.</p>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="walloflove.html">Wall of Love</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copyright">© 2026 Orange's Barbeque Smoke House. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="menu-script.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>

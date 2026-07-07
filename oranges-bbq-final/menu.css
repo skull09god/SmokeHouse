@@ -262,8 +262,7 @@ button { font: inherit; }
   justify-content: space-between;
   gap: 24px;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.24)),
-    url('assets/pages/page-9.jpg') center/cover;
+    linear-gradient(90deg,rgba(39, 83, 35, 0.75), rgba(0,0,0,.24));
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }

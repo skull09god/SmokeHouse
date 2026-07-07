@@ -586,6 +586,11 @@ body:before {
   display: block;
 }
 
+/* Custom Scroll Down Order Online Indicator styles */
+.mobile-scroll-indicator {
+  display: none;
+}
+
 /* Right layout side item selection column styles codes */
 .viewer-right-selector {
   display: flex;
@@ -822,7 +827,7 @@ body:before {
 @media (max-width: 1080px) {
   .viewer-split-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
     height: 100%;
     min-height: initial;
     overflow-y: auto;
@@ -831,16 +836,59 @@ body:before {
     max-height: 90vh;
     overflow-y: auto;
   }
+  
+  /* CRITICAL REQUIREMENT: Make left book image box fill the exact viewable phone area screen minus the header line */
   .viewer-left-book { 
     padding: 20px; 
     border-right: none;
     border-bottom: 1px solid var(--line);
-    height: 300px; 
+    height: calc(90vh - 40px); /* Full height bounds execution rule allocation */
+    position: relative;
   }
   .section-book {
     min-height: initial;
-    height: calc(100% - 50px);
+    height: calc(100% - 90px);
   }
+  .page-image {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* ORDER ONLINE Visual layout drop anchor trigger rule blocks */
+  .mobile-scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: var(--accent-2);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    pointer-events: none;
+    background: rgba(12, 12, 11, 0.85);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid var(--line);
+    gap: 2px;
+    animation: bounceTextArrow 1.6s ease infinite;
+  }
+  .mobile-scroll-indicator span {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  @keyframes bounceTextArrow {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
   .viewer-right-selector {
     height: auto;
     overflow: visible;
@@ -917,6 +965,9 @@ body:before {
   .viewer-panel {
     max-height: 95vh;
     width: 100%;
+  }
+  .viewer-left-book {
+    height: calc(95vh - 40px);
   }
   .menu-item-row {
     flex-direction: column;

@@ -786,138 +786,45 @@ body:before {
 }
 
 /* RESPONSIVE DESIGN ADAPTATIONS WRAPPERS SYSTEM CODES INTERACTION TRACKERS */
-/* ==========================================================================
-   ADVANCED RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
-   ========================================================================== */
-
-/* Universal Modal Sizing & Padding Resets */
-@media (max-width: 1200px) {
-  .section-viewer {
-    padding: 20px;
-  }
-  .viewer-panel {
-    width: 100%;
-    max-height: 92vh;
-  }
-}
-
-/* Tablet & Mobile Stacked Orientation Transition Engine */
 @media (max-width: 1080px) {
   .viewer-split-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr; /* Stack book component over items list */
-    height: 100%;
-    max-height: calc(88vh - 20px);
-    overflow: hidden;
+    grid-template-rows: auto 1fr;
+    height: 92vh;
   }
-
-  /* Fixed compact viewport sizing for the menu image panel on mobile */
-  .viewer-left-book {
-    padding: 16px 20px;
-    height: 340px; /* Rigid constraint keeping photo beautifully bounded */
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-    background: #121110;
+  .viewer-panel {
+    max-height: 95vh;
   }
-
-  .viewer-toolbar {
-    margin-bottom: 12px;
+  .viewer-left-book { 
+    padding: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    border-right: 1px solid var(--line); 
+    background: #11100f;
+    height: 340px; 
   }
-
-  .viewer-toolbar strong {
-    font-size: 20px;
-  }
-
-  .section-book {
-    height: calc(100% - 45px);
-    min-height: auto;
-  }
-
-  /* Item Selection Panel isolated scroll framework on mobile */
   .viewer-right-selector {
-    height: calc(100% - 340px); /* Fill remaining viewport fraction exactly */
-    overflow: hidden;
+    height: calc(92vh - 340px);
   }
-
-  .selector-header {
-    padding: 20px 24px 12px;
-  }
-
-  .selector-header h3 {
-    font-size: 24px;
-  }
-
-  .selector-items-list {
-    padding: 12px 24px 30px;
-    gap: 12px;
-  }
-
-  /* Compact rows adjustments for handheld screens */
-  .menu-item-row {
-    padding: 12px;
-  }
-
-  .item-title-line h4 {
-    font-size: 14px;
-  }
-
-  .item-price {
-    font-size: 15px;
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
   }
 }
 
-/* Small Smartphone Optimization Layer */
 @media (max-width: 500px) {
-  .section-viewer {
-    padding: 10px;
-  }
-
-  .viewer-panel {
-    max-height: 96vh;
-  }
-
-  .viewer-split-layout {
-    max-height: 96vh;
-  }
-
-  .viewer-left-book {
-    height: 260px; /* Slightly shorter container on small phones to save vertical area */
-    padding: 12px 16px;
-  }
-
-  .viewer-right-selector {
-    height: calc(100% - 260px);
-  }
-
-  .selector-header {
-    padding: 16px 16px 8px;
-  }
-
-  .selector-header h3 {
-    font-size: 20px;
-  }
-
-  .selector-items-list {
-    padding: 8px 16px 24px;
-  }
-
-  .close-btn {
-    top: 10px;
-    right: 10px;
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-
-  /* Expand floating drawer shell layout on touch screens */
   .cart-drawer {
     width: 100vw;
     right: -100vw;
   }
-
-  /* Navigation elements fine-tuning */
-  .book-btn {
-    padding: 8px 14px;
-    font-size: 10px;
+  .navbar {
+    padding: 0 4%;
   }
+  .nav-right-wrapper {
+    gap: 15px;
+  }
+  .nav-links {
+    display: none;
+  } 
 }

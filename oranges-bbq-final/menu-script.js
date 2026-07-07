@@ -25,6 +25,7 @@ const menuSections = [
     id: 'sec-pasta',
     label: 'Pasta Section',
     img: 'assets/pages/pasta.jpeg',
+    price:"14/160",
     items: [
       { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Olive oil,  garlic, chilli flakes,herbes & parmesan.' },
       { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Spicy tomato sauce with herbs & parmesan.' },

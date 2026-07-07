@@ -28,8 +28,6 @@ const menuSections = [
     items: [
       { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Tossed elegantly in premium olive oil, sliced toasted garlic, chili flakes & parmesan.' },
       { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Fiery traditional Italian tomato sauce base combined with garden fresh herbs.' },
-      { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Rich, thick velvety white cream sauce topped with pan-seared juicy chicken breast strips.' },
-      { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Fiery traditional Italian tomato sauce base combined with garden fresh herbs.' },
       { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Rich, thick velvety white cream sauce topped with pan-seared juicy chicken breast strips.' }
     ]
   },
@@ -116,8 +114,28 @@ const viewerCount = document.getElementById('viewerCount');
 const selectorItemsList = document.getElementById('selectorItemsList');
 const sectionBook = document.getElementById('sectionBook');
 
+// Mobile Menu References
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
 let activeIndex = 0;
 let isTurning = false;
+
+// Mobile Navigation Toggle Controller Engine
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close navigation automatically upon link routing clicks
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
 
 // Initial Grid Generator Execution
 function renderCategoryTrackCards() {
@@ -281,17 +299,22 @@ function refreshCartStateStoreUI() {
     `;
   });
 
-  badgeCount.textContent = totalItemsCount;
-  subtotalValueLabel.textContent = `₹${computedSubtotal}`;
-  drawerItemsContainer.innerHTML = totalItemsCount === 0 
-    ? `<p style="text-align:center; color:var(--muted); margin-top:40px;">Your cart is currently empty.</p>`
-    : innerHtmlContentBuffer;
+  if (badgeCount) badgeCount.textContent = totalItemsCount;
+  if (subtotalValueLabel) subtotalValueLabel.textContent = `₹${computedSubtotal}`;
+  
+  if (drawerItemsContainer) {
+    drawerItemsContainer.innerHTML = totalItemsCount === 0 
+      ? `<p style="text-align:center; color:var(--muted); margin-top:40px;">Your cart is currently empty.</p>`
+      : innerHtmlContentBuffer;
+  }
 
   // Validation checking constraints metrics output layout logic engine guards
-  if (totalItemsCount > 0 && computedSubtotal < 499) {
-    errorMsgDiv.textContent = `Minimum delivery limit is ₹499. Please add ₹${499 - computedSubtotal} more.`;
-  } else {
-    errorMsgDiv.textContent = '';
+  if (errorMsgDiv) {
+    if (totalItemsCount > 0 && computedSubtotal < 499) {
+      errorMsgDiv.textContent = `Minimum delivery limit is ₹499. Please add ₹${499 - computedSubtotal} more.`;
+    } else {
+      errorMsgDiv.textContent = '';
+    }
   }
 }
 

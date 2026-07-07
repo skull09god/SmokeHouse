@@ -26,9 +26,11 @@ const menuSections = [
     label: 'Pasta Section',
     img: 'assets/pages/pasta.jpeg',
     items: [
-      { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Tossed elegantly in premium olive oil, sliced toasted garlic, chili flakes & parmesan.' },
-      { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Fiery traditional Italian tomato sauce base combined with garden fresh herbs.' },
-      { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Rich, thick velvety white cream sauce topped with pan-seared juicy chicken breast strips.' }
+      { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Olive oil,  garlic, chilli flakes,herbes & parmesan.' },
+      { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Spicy tomato sauce with herbs & parmesan.' },
+      { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Creamy white sauce with parmesan &herbs.' },
+      {id: 'ps-napoli', title: 'Pasta Napoli (Veg/Chicken)', price: 279/329, desc: 'Classic tomato basil sauce with parmesan.' },
+      { id: 'ps-primavera', title: 'Pasta Arrabbiata (Veg)', price: 299, desc: 'Pasta with mixed vegetables in a light creamy or tomato sauce.' },
     ]
   },
   {
@@ -36,8 +38,12 @@ const menuSections = [
     label: 'Soups & Warm Bowls',
     img: 'assets/pages/soups.jpeg',
     items: [
-      { id: 'sp-manchow', title: 'Manchow Soup (Chicken)', price: 160, desc: 'Thick spicy broth simmered with chopped chicken veggies, topped with crispy fried noodles.' },
-      { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)', price: 140, desc: 'Creamy light golden sweet corn blend accented with fine diced seasonal greens.' }
+      { id: 'sp-clear', title: 'Clear Soup', price: 140/160, desc: 'Fresh veggies/Chicken cubes simmered in vegetable/chicken broth and served hot.' },
+      { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)', price: 140/160, desc: 'Creamy light corn blend with assorted vegetables/chicken.' },
+      { id: 'sp-hot&sour', title:'Hot & Sour Soup', price: 140/160, desc: 'Mixed vegetable/chicken in a spicy soya-based soup.' },
+      { id: 'sp-Manchow', title: 'Manchow Soup', price: 140/160, desc: 'Thick vegetable/chicken soup served along crispy fried noodles.' },
+      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable', price: 140/160, desc: 'Thick creamy soup served with your choice.' }
+
     ]
   },
   {

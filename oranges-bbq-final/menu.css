@@ -828,43 +828,57 @@ body:before {
   .viewer-split-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    height: 100%;
+    height: auto;
     min-height: initial;
-    overflow-y: auto;
+    overflow-y: visible;
   }
   .viewer-panel {
     max-height: 90vh;
     overflow-y: auto;
   }
   
-  /* CRITICAL REQUIREMENT: Make left book image box fill the exact viewable phone area screen minus the header line */
+  /* FIXED: Set container height to auto so extremely long physical menu images don't get choked or cropped */
   .viewer-left-book { 
     padding: 20px; 
     border-right: none;
     border-bottom: 1px solid var(--line);
-    height: calc(90vh - 40px); /* Full height bounds execution rule allocation */
+    height: auto; 
     position: relative;
   }
+  
+  /* FIXED: Remove fixed perspective constraints that squash variable aspect ratios */
   .section-book {
     min-height: initial;
-    height: calc(100% - 90px);
+    height: auto;
   }
+  
+  /* FIXED: Image expands smoothly down its original length */
   .page-image {
     object-fit: contain;
-    height: 100%;
+    height: auto;
     width: 100%;
+    max-height: none;
+  }
+  
+  .menu-paper {
+    position: relative;
+    height: auto;
+    box-shadow: none;
+    background: transparent;
+    border: none;
   }
 
-  /* ORDER ONLINE Visual layout drop anchor trigger rule blocks */
+  /* ORDER ONLINE Indicator alignment rules */
   .mobile-scroll-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: 20px auto 5px;
+    bottom: initial;
+    left: initial;
+    transform: none;
     z-index: 10;
     color: var(--accent-2);
     font-size: 11px;
@@ -872,11 +886,12 @@ body:before {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     pointer-events: none;
-    background: rgba(12, 12, 11, 0.85);
-    padding: 6px 16px;
+    background: rgba(25, 24, 23, 0.95);
+    padding: 8px 20px;
     border-radius: 30px;
     border: 1px solid var(--line);
-    gap: 2px;
+    gap: 4px;
+    width: fit-content;
     animation: bounceTextArrow 1.6s ease infinite;
   }
   .mobile-scroll-indicator span {
@@ -885,8 +900,8 @@ body:before {
   }
 
   @keyframes bounceTextArrow {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(6px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
   }
 
   .viewer-right-selector {
@@ -967,7 +982,7 @@ body:before {
     width: 100%;
   }
   .viewer-left-book {
-    height: calc(95vh - 40px);
+    height: auto;
   }
   .menu-item-row {
     flex-direction: column;

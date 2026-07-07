@@ -94,7 +94,7 @@ const menuSections = [
  {
   id: 'sec-combos',
   label: 'Orange Barbeque Combo Section',
-  img: 'assets/pages/combo.jpeg',
+  img: 'assets/pages/combos.jpeg',
   items: [
     { id: 'rc-smoked-bbq-chicken-rice-bowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce.' },
 

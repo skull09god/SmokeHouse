@@ -38,28 +38,12 @@ const menuSections = [
     id: 'sec-soups',
     label: 'Soups & Warm Bowls',
     img: 'assets/pages/soups.jpeg',
-    price:"140/160",
     items: [
-      { id: 'sp-clear', title: 'Clear Soup', variants: [
-          { suffix: 'Veg', price: 140 },
-          { suffix: 'Chicken', price: 160 }
-        ], desc: 'Fresh veggies/Chicken cubes simmered in vegetable/chicken broth and served hot.' },
-  { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)',price:"140/160", variants: [
-          { suffix: 'Veg', price: 140 },
-          { suffix: 'Chicken', price: 160 }
-        ], desc: 'Creamy light corn blend with assorted vegetables/chicken.' },
-  { id: 'sp-hot&sour', title:'Hot & Sour Soup',price:"140/160", variants: [
-          { suffix: 'Veg', price: 140 },
-          { suffix: 'Chicken', price: 160 }
-        ], desc: 'Mixed vegetable/chicken in a spicy soya-based soup.' },
-  { id: 'sp-Manchow', title: 'Manchow Soup',price:"140/160", variants: [
-          { suffix: 'Veg', price: 140 },
-          { suffix: 'Chicken', price: 160 }
-        ], desc: 'Thick vegetable/chicken soup served along crispy fried noodles.' },
-  { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable',price:"140/160", variants: [
-          { suffix: 'Veg', price: 140 },
-          { suffix: 'Chicken', price: 160 }
-        ], desc: 'Thick creamy soup served with your choice.' }
+      { id: 'sp-clear', title: 'Clear Soup',price:"140/160", desc: 'Fresh veggies/Chicken cubes simmered in vegetable/chicken broth and served hot.' },
+      { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)',price:"140/160", desc: 'Creamy light corn blend with assorted vegetables/chicken.' },
+      { id: 'sp-hot&sour', title:'Hot & Sour Soup',price:"140/160", desc: 'Mixed vegetable/chicken in a spicy soya-based soup.' },
+      { id: 'sp-Manchow', title: 'Manchow Soup',price:"140/160", desc: 'Thick vegetable/chicken soup served along crispy fried noodles.' },
+      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable',price:"140/160", desc: 'Thick creamy soup served with your choice.' }
 
     ]
   },

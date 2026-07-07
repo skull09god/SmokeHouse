@@ -47,8 +47,8 @@ const menuSections = [
       { id: 'sp-hotnonveg', title:'Hot & Sour Soup (Non-Veg)',price:160, desc: 'Mixed chicken in a spicy soya-based soup.' },
       { id: 'sp-Manchow0', title: 'Manchow Soup (Veg)',price:140, desc: 'Thick vegetable soup served along crispy fried noodles.' },
       { id: 'sp-Manchow1', title: 'Manchow Soup (Non-Veg)',price:160, desc: 'Thick chicken soup served along crispy fried noodles.' },
-      { id: 'sp-Tomato', title: 'Cream of Tomato/Mushroom/Vegetable',price:140, desc: 'Thick creamy soup served with your choice.' },
-      { id: 'sp-TomatoVegetable', title: 'Cream of Tomato/Vegetable',price:160, desc: 'Thick creamy soup served with your choice.' }
+      { id: 'sp-Tomato', title: 'Cream of Tomato/Vegetable',price:140, desc: 'Thick creamy soup served with your choice.' },
+      { id: 'sp-TomatoVegetable', title: 'Cream of Tomato/Mushroom/Vegetable',price:160, desc: 'Thick creamy soup served with your choice.' }
 
     ]
   },

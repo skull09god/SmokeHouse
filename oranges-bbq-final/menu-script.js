@@ -128,6 +128,7 @@ if (menuBtn && navLinks) {
     navLinks.classList.toggle('active');
   });
 
+  // Close navigation automatically upon link routing clicks
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menuBtn.classList.remove('active');
@@ -158,25 +159,12 @@ function openSectionByIndex(index) {
   
   const targetSection = menuSections[activeIndex];
   
-  // 1. Clear any stale animation markup remnants first
+  // 1. Core Fix: Clear any stale animation markup remnants first
   turningPaper.innerHTML = '';
   sectionBook.classList.remove('turn-next', 'turn-prev');
   
-  // Remove preexisting scroll indicators to avoid duplicating them
-  const oldIndicator = document.querySelector('.mobile-scroll-indicator');
-  if (oldIndicator) oldIndicator.remove();
-  
-  // 2. Inject main image layout views
+  // 2. Inject the main image with absolute path stability guarantees
   currentPaper.innerHTML = `<img class="page-image" src="${targetSection.img}" alt="${targetSection.label}" />`;
-  
-  // Append the Order Online arrow structure cleanly inside the viewport section for phone screen layouts
-  const leftBookContainer = document.querySelector('.viewer-left-book');
-  if (leftBookContainer) {
-    const arrowIndicator = document.createElement('div');
-    arrowIndicator.className = 'mobile-scroll-indicator';
-    arrowIndicator.innerHTML = 'Order Online <span>🔽</span>';
-    leftBookContainer.appendChild(arrowIndicator);
-  }
   
   // 3. Update Text Content Headers
   viewerCount.textContent = targetSection.label.toUpperCase();
@@ -189,14 +177,8 @@ function openSectionByIndex(index) {
   viewer.setAttribute('aria-hidden', 'false');
   document.body.classList.add('no-scroll');
   
-  // 6. Force Reflow Layout reset metrics checking steps
+  // 6. Safeguard: Force a quick layout check in case flexbox collapses container box dimensions
   void sectionBook.offsetWidth;
-
-  // 7. Enforce that viewport pane defaults to the top, showing the image clearly on initialization
-  const viewerPanel = document.querySelector('.viewer-panel');
-  if (viewerPanel) {
-    viewerPanel.scrollTop = 0;
-  }
 }
 
 // Public context handler helper mapping hook execution strings codes
@@ -241,16 +223,26 @@ function navigateSectionTrack(step) {
   const nextIndex = (activeIndex + step + menuSections.length) % menuSections.length;
   isTurning = true;
 
+  // 1. Clear old animation classes to reset the hardware acceleration layer
   sectionBook.classList.remove('turn-next', 'turn-prev');
+
+  // 2. Set up the snapshot: The current image becomes the turning page
   turningPaper.innerHTML = currentPaper.innerHTML;
+  
+  // 3. Silently load the incoming target image underneath
   currentPaper.innerHTML = `<img class="page-image" src="${menuSections[nextIndex].img}" alt="${menuSections[nextIndex].label}" />`;
   
+  // 4. Update the layout text descriptions safely
   viewerCount.textContent = menuSections[nextIndex].label.toUpperCase();
   renderItemSelectorsForSection(menuSections[nextIndex]);
 
+  // 5. Force DOM reflow execution to commit image swaps before executing animation engine
   void sectionBook.offsetWidth;
+
+  // 6. Inject the active directional animation transition class
   sectionBook.classList.add(step > 0 ? 'turn-next' : 'turn-prev');
 
+  // 7. Synchronized with the 0.4s CSS turn transition speed to safely clean up page tracking buffers
   setTimeout(() => {
     activeIndex = nextIndex;
     sectionBook.classList.remove('turn-next', 'turn-prev');
@@ -270,6 +262,7 @@ window.modifyCartItemQty = function(id, title, price, adjustment) {
     delete shoppingCart[id];
   }
   
+  // Sync current active view instance numbers
   const modalCounterElement = document.getElementById(`qty-modal-${id}`);
   if (modalCounterElement) {
     modalCounterElement.textContent = shoppingCart[id] ? shoppingCart[id].qty : 0;
@@ -315,6 +308,7 @@ function refreshCartStateStoreUI() {
       : innerHtmlContentBuffer;
   }
 
+  // Validation checking constraints metrics output layout logic engine guards
   if (errorMsgDiv) {
     if (totalItemsCount > 0 && computedSubtotal < 499) {
       errorMsgDiv.textContent = `Minimum delivery limit is ₹499. Please add ₹${499 - computedSubtotal} more.`;
@@ -340,6 +334,7 @@ window.toggleCartDrawer = function() {
   }
 };
 
+// Checkout Final Execution Handler String Compiler
 window.processCheckout = function() {
   const cartEntries = Object.values(shoppingCart);
   if (cartEntries.length === 0) {
@@ -355,6 +350,7 @@ window.processCheckout = function() {
     return;
   }
 
+  // Construct raw string representation data matrix map format mapping stream lines
   let waMessageString = `🔥 *ORANGE'S SMOKEHOUSE NEW ORDER* 🔥\n`;
   waMessageString += `====================================\n`;
   waMessageString += `🗺️ _Delivery Requirement: Under 3 KM Route Only_\n\n`;
@@ -372,10 +368,12 @@ window.processCheckout = function() {
   window.open(finalizedTargetUrl, '_blank');
 };
 
+// Utilities escaping helpers preventing execution code breaches safely inside system logs
 function escapeHtml(string) {
   return String(string).replace(/'/g, "\\'");
 }
 
+// Keyboard and button click tracking connection event binding system blocks initialization setup
 document.getElementById('prevSection').onclick = () => navigateSectionTrack(-1);
 document.getElementById('nextSection').onclick = () => navigateSectionTrack(1);
 
@@ -386,5 +384,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') navigateSectionTrack(-1);
 });
 
+// Primary Entry Boot Sequence Loop Runs Core Grid Generator Engine directly
 renderCategoryTrackCards();
 refreshCartStateStoreUI();

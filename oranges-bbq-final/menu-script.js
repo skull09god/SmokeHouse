@@ -3,7 +3,7 @@ const menuSections = [
   {
     id: 'sec-seafood',
     label: 'Seafood Section',
-    img: 'assets/pages/page-1.jpeg',
+    img: 'assets/pages/seafood.jpeg',
     items: [
       { id: 'sf-calamari', title: 'Crispy Calamari Rings', price: 349, desc: 'Crispy fried calamari served with signature tartar sauce.' },
       { id: 'sf-popcorn', title: 'Prawn Popcorn', price: 399, desc: 'Crispy bite-sized prawns tossed with house spices & sweet chili dip.' },
@@ -14,7 +14,7 @@ const menuSections = [
   {
     id: 'sec-buffet',
     label: 'Barbeque Buffet',
-    img: 'assets/pages/page-2.jpeg',
+    img: 'assets/pages/buffet.jpeg',
     items: [
       { id: 'bf-veg', title: 'Unlimited Veg Buffet', price: 799, desc: '65+ items featuring Honey Chili Pineapple, Labnish Mushroom, Naan, Mains & Desserts.' },
       { id: 'bf-nonveg', title: 'Unlimited Non-Veg Buffet', price: 899, desc: '65+ items including BBQ Chicken Tikka, Coastal Prawns, Chicken Dum Biryani & Mutton Rogan Josh.' },
@@ -24,7 +24,7 @@ const menuSections = [
   {
     id: 'sec-pasta',
     label: 'Pasta Section',
-    img: 'assets/pages/page-3.jpeg',
+    img: 'assets/pages/pasta.jpeg',
     items: [
       { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Tossed elegantly in premium olive oil, sliced toasted garlic, chili flakes & parmesan.' },
       { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Fiery traditional Italian tomato sauce base combined with garden fresh herbs.' },
@@ -36,7 +36,7 @@ const menuSections = [
   {
     id: 'sec-soups',
     label: 'Soups & Warm Bowls',
-    img: 'assets/pages/page-4.jpeg',
+    img: 'assets/pages/soups.jpeg',
     items: [
       { id: 'sp-manchow', title: 'Manchow Soup (Chicken)', price: 160, desc: 'Thick spicy broth simmered with chopped chicken veggies, topped with crispy fried noodles.' },
       { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)', price: 140, desc: 'Creamy light golden sweet corn blend accented with fine diced seasonal greens.' }
@@ -45,7 +45,7 @@ const menuSections = [
   {
     id: 'sec-mocktails',
     label: 'Mocktails & Beverages',
-    img: 'assets/pages/page-5.jpeg',
+    img: 'assets/pages/mocktail.jpeg',
     items: [
       { id: 'mk-mojito', title: 'Virgin Mojito', price: 149, desc: 'Classic refreshing blend of crushed mint leaves, fresh lime wedges, simple syrup & sparkling soda.' },
       { id: 'mk-blue', title: 'Blue Lagoon Cooler', price: 149, desc: 'Zesty blue curacao infusion mixed with fresh lemon squeeze topped off with clear lemonade.' },
@@ -55,7 +55,7 @@ const menuSections = [
   {
     id: 'sec-pizza-burger',
     label: 'Pizzas & Burgers',
-    img: 'assets/pages/page-6.jpeg',
+    img: 'assets/pages/pizza.jpeg',
     items: [
       { id: 'pz-margherita', title: 'Classic Margherita Pizza (Regular)', price: 299, desc: 'Woodfired fresh tomato baseline sauce layout loaded heavily with artisanal mozzarella & fresh basil.' },
       { id: 'pz-bbqchick', title: 'BBQ Chicken Pizza (Large)', price: 649, desc: 'House smoked tender chicken chunks, red onions, grilled capsicum over premium sweet BBQ baseline drizzle.' },
@@ -65,7 +65,7 @@ const menuSections = [
   {
     id: 'sec-continental',
     label: 'Continental Menu',
-    img: 'assets/pages/page-7.jpeg',
+    img: 'assets/pages/continental.jpeg',
     items: [
       { id: 'cn-lasagna', title: 'Baked Vegetarian Lasagna', price: 349, desc: 'Layered sheets of pasta loaded with minced garden vegetables, rich pomodoro, creamy bechamel & grilled cheese.' },
       { id: 'cn-steak', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Juicy skillet grilled breast fillet served with dynamic seasonal vegetables side & rich herb emulsion.' }
@@ -74,7 +74,7 @@ const menuSections = [
   {
     id: 'sec-sandwiches',
     label: 'Club Sandwiches',
-    img: 'assets/pages/page-8.jpeg',
+    img: 'assets/pages/combo.jpeg',
     items: [
       { id: 'sd-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple decker toast stuffed with chicken salad, fried egg, lettuce, tomato & mayo. Includes fries + drink.' },
       { id: 'sd-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Smoked hickory BBQ shredded chicken chunks layered with crisp hickory bacon, cheddar & house spreads.' }
@@ -83,7 +83,7 @@ const menuSections = [
   {
     id: 'sec-combos',
     label: 'Rice & Bread Combos',
-    img: 'assets/pages/page-9.jpeg',
+    img: 'assets/pages/combos.jpeg',
     items: [
       { id: 'cb-bbqbowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Charcoal grilled chicken thighs sliced over butter-steeped herb rice alongside rich peppercorn pan sauce sauce.' },
       { id: 'cb-stroganoff', title: 'Chicken Stroganoff Combo', price: 499, desc: 'Creamy mushroom and chicken stroganoff reduction paired with buttered herb rice lines and toasted garlic bread.' }
@@ -92,7 +92,7 @@ const menuSections = [
   {
     id: 'sec-platters',
     label: 'BBQ Platter Section',
-    img: 'assets/pages/page-10.jpeg',
+    img: 'assets/pages/platter.jpeg',
     items: [
       { id: 'pl-classic', title: 'Classic BBQ Platter (Serves 1-2)', price: 699, desc: '4 BBQ chicken Wings, 4 Tikka pcs, 2 Seekh Kebabs, Grilled Sausages, House Fries, Buttered Sweet Corn & Mint dip.' },
       { id: 'pl-premium', title: 'Premium Meat Feast (Serves 3-4)', price: 1999, desc: 'Hickory BBQ chicken quarters, tender lamb chops, wings, seekh, tikkas, smoked sausages, sides & 4 master sauces.' },

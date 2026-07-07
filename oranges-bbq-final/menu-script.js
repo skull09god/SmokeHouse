@@ -30,7 +30,7 @@ const menuSections = [
       { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Spicy tomato sauce with herbs & parmesan.' },
       { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Creamy white sauce with parmesan &herbs.' },
       {id: 'ps-napoli', title: 'Pasta Napoli (Veg/Chicken)', price: "279/329", desc: 'Classic tomato basil sauce with parmesan.' },
-      { id: 'ps-primavera', title: 'Pasta Arrabbiata (Veg)', price: 299, desc: 'Pasta with mixed vegetables in a light creamy or tomato sauce.' },
+      { id: 'ps-primavera', title: 'Pasta Primavera (Veg)', price: 299, desc: 'Pasta with mixed vegetables in a light creamy or tomato sauce.' },
     ]
   },
   {
@@ -38,11 +38,11 @@ const menuSections = [
     label: 'Soups & Warm Bowls',
     img: 'assets/pages/soups.jpeg',
     items: [
-      { id: 'sp-clear', title: 'Clear Soup', price: 140/160, desc: 'Fresh veggies/Chicken cubes simmered in vegetable/chicken broth and served hot.' },
-      { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)', price: 140/160, desc: 'Creamy light corn blend with assorted vegetables/chicken.' },
-      { id: 'sp-hot&sour', title:'Hot & Sour Soup', price: 140/160, desc: 'Mixed vegetable/chicken in a spicy soya-based soup.' },
-      { id: 'sp-Manchow', title: 'Manchow Soup', price: 140/160, desc: 'Thick vegetable/chicken soup served along crispy fried noodles.' },
-      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable', price: 140/160, desc: 'Thick creamy soup served with your choice.' }
+      { id: 'sp-clear', title: 'Clear Soup', price: "140/160", desc: 'Fresh veggies/Chicken cubes simmered in vegetable/chicken broth and served hot.' },
+      { id: 'sp-sweetcorn', title: 'Sweet Corn Soup (Veg)', price: "140/160", desc: 'Creamy light corn blend with assorted vegetables/chicken.' },
+      { id: 'sp-hot&sour', title:'Hot & Sour Soup', price: "140/160", desc: 'Mixed vegetable/chicken in a spicy soya-based soup.' },
+      { id: 'sp-Manchow', title: 'Manchow Soup', price: "140/160", desc: 'Thick vegetable/chicken soup served along crispy fried noodles.' },
+      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable', price: "140/160", desc: 'Thick creamy soup served with your choice.' }
 
     ]
   },
@@ -51,9 +51,15 @@ const menuSections = [
     label: 'Mocktails & Beverages',
     img: 'assets/pages/mocktail.jpeg',
     items: [
-      { id: 'mk-mojito', title: 'Virgin Mojito', price: 149, desc: 'Classic refreshing blend of crushed mint leaves, fresh lime wedges, simple syrup & sparkling soda.' },
-      { id: 'mk-blue', title: 'Blue Lagoon Cooler', price: 149, desc: 'Zesty blue curacao infusion mixed with fresh lemon squeeze topped off with clear lemonade.' },
-      { id: 'mk-apple', title: 'Green Apple Cooler', price: 149, desc: 'Crisp green apple syrup layers dynamic tracking balanced out with freshly torn field mint leaves.' }
+      { id: 'mk-mojito', title: 'Virgin Mojito', price: 149, desc: 'Classic mojito with mint,lime,soda and a touch of sweetness.' },
+      { id: 'mk-strawberry', title: 'Strawberry Lemonade', price: 149, desc: 'A sweet blend of strawberry,lemon,and a splash of soda.' },
+      { id: 'mk-tropical', title: 'Tropical Passion', price: 149, desc: 'Atropical mix of orange, pineapple,passion fruit and line.' },
+      { id: 'mk-blue', title: 'Blue Lagoon ', price: 149, desc: 'A refreshing blue curacao mix with lemon and soda.' },
+      { id: 'mk-apple', title: 'Green Apple Cooler', price: 149, desc: 'Crisp green apple syrup with lime and mint , cool & refreshing.' },
+      { id: 'mk-watermelon', title: 'Watermelon Fizz', price: 149, desc: 'Fresh watermelon juice with lime and a splash of soda.' },
+      { id: 'mk-orange', title: 'Orange Spritz', price: 149, desc: 'Zesty orange juice with soda and a hint of citrus.' }
+
+
     ]
   },
   {

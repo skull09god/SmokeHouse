@@ -41,12 +41,12 @@
 
   <section class="hero" id="home">
     <div class="hero-copy">
-      <span class="kicker">Orange's Digital Menu</span>
-      <h1>Explore every menu section like a real restaurant book.</h1>
-      <p>Choose a category card and it opens a clean flip-page menu showing only the dishes from that section.</p>
+      <span class="kicker">Orange's Digital Smokehouse Menu</span>
+      <h1>Explore our signature sections & build your delivery order.</h1>
+      <p>Select any signature menu track category block below to instantly inspect authentic kitchen pages, select items directly, and send an instantly synchronized order breakdown out to our local delivery dispatch team.</p>
       <div class="hero-actions">
         <a href="#sections" class="btn primary">View Menu Sections</a>
-        <button class="btn ghost" type="button" onclick="openSection('page-9')">Today’s Buffet</button>
+        <button class="btn ghost" type="button" onclick="openSection('sec-buffet')">Today’s Buffet</button>
       </div>
     </div>
     <div class="hero-panel">
@@ -54,17 +54,17 @@
       <h2>65+ Unlimited Delights</h2>
       <div class="price-row"><span>Veg Lunch Buffet</span><strong>₹799</strong></div>
       <div class="price-row"><span>Non-Veg Lunch Buffet</span><strong>₹899</strong></div>
-      <div class="price-row"><span>Kids Buffet(5-10 years)</span><strong>₹450</strong></div>
-      <p>Fresh grills, Indian mains, Asian favourites and desserts.</p>
+      <div class="price-row"><span>Kids Buffet (5-10 yrs)</span><strong>₹450</strong></div>
+      <p>Fresh live table grills, premium Indian mains, pan-Asian street favorites and specialty house desserts.</p>
     </div>
   </section>
 
   <main>
     <section class="section-wrap" id="sections">
       <div class="section-title">
-        <span>Our Menu</span>
-        <h2>Choose Your Section</h2>
-        <p>Each box opens a dedicated flip-page view for that section only.</p>
+        <span>Our Culinary Sections</span>
+        <h2>Choose Your Category</h2>
+        <p>Each box unlocks a realistic interactive viewer showcasing premium layout designs, specific ingredient maps, and individual item selector inputs.</p>
       </div>
       <div class="category-grid" id="categoryCards"></div>
     </section>
@@ -72,26 +72,65 @@
     <section class="reservation-band" id="reservation">
       <div>
         <span class="kicker compact">Private Dining</span>
-        <h2>Group Prix-Fixe Menu</h2>
-        <p>Perfect for birthdays, family dinners and office celebrations.</p>
+        <h2>Group Prix-Fixe Menu Packs</h2>
+        <p>Tailored custom dining solutions optimized for office corporate events, large family celebrations and birthday milestones.</p>
       </div>
-      <a class="btn primary" href="https://wa.me/916000787211?text=Hello%20Orange's%20Barbeque%20Smoke%20House%2C%20I%20want%20to%20reserve%20a%20table." target="_blank">Reserve Table</a>
+      <a class="btn primary" href="https://wa.me/916000787211?text=Hello" target="_blank">Reserve Table</a>
     </section>
   </main>
 
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="toggleCartDrawer()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Smokehouse Cart</h3>
+      <button class="close-drawer-btn" onclick="toggleCartDrawer()">×</button>
+    </div>
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      </div>
+    <div class="cart-drawer-footer">
+      <div class="delivery-rules-banner">
+        <p>📍 Delivery under <strong>3 KM Only</strong></p>
+        <p>💰 Minimum delivery subtotal threshold: <strong>₹499</strong></p>
+      </div>
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotalValue">₹0</strong>
+      </div>
+      <div class="cart-validation-error" id="cartValidationError"></div>
+      <button class="btn primary checkout-btn" id="whatsappCheckoutBtn" onclick="processCheckout()">
+        Send Order via WhatsApp 🚀
+      </button>
+    </div>
+  </aside>
+
   <div class="section-viewer" id="sectionViewer" aria-hidden="true">
     <div class="viewer-backdrop" onclick="closeViewer()"></div>
-    <div class="viewer-panel" role="dialog" aria-modal="true" aria-label="Menu section viewer">
+    <div class="viewer-panel" role="dialog" aria-modal="true">
       <button class="close-btn" type="button" onclick="closeViewer()" aria-label="Close menu">X</button>
-      <div class="viewer-toolbar">
-        <button class="book-btn" id="prevSection" type="button">‹ Previous</button>
-        <span><strong id="viewerCount">01</strong></span>
-        <button class="book-btn" id="nextSection" type="button">Next ›</button>
+      
+      <div class="viewer-split-layout">
+        <div class="viewer-left-book">
+          <div class="viewer-toolbar">
+            <button class="book-btn" id="prevSection" type="button">‹ Prev Section</button>
+            <span><strong id="viewerCount">SEAFOOD</strong></span>
+            <button class="book-btn" id="nextSection" type="button">Next Section ›</button>
+          </div>
+          <div class="section-book" id="sectionBook">
+            <article class="menu-paper current-paper" id="currentPaper"></article>
+            <article class="menu-paper turning-paper" id="turningPaper"></article>
+          </div>
+        </div>
+        
+        <div class="viewer-right-selector">
+          <div class="selector-header">
+            <h3>Add Items to Delivery Order</h3>
+            <p>Select your desired items from this section below:</p>
+          </div>
+          <div class="selector-items-list" id="selectorItemsList">
+            </div>
+        </div>
       </div>
-      <div class="section-book" id="sectionBook">
-        <article class="menu-paper current-paper" id="currentPaper"></article>
-        <article class="menu-paper turning-paper" id="turningPaper"></article>
-      </div>
+
     </div>
   </div>
 

@@ -39,16 +39,16 @@ const menuSections = [
     label: 'Soups & Warm Bowls',
     img: 'assets/pages/soups.jpeg',
     items: [
-      { id: 'sp-clear0', title: 'Clear Soup',price:"140", desc: 'Fresh veggies cubes simmered in vegetable broth and served hot.' },
-      { id: 'sp-clear1', title: 'Clear Soup',price:"160", desc: 'Fresh Chicken cubes simmered in chicken broth and served hot.' },
+      { id: 'sp-clear0', title: 'Clear Soup (Veg)',price:"140", desc: 'Fresh veggies cubes simmered in vegetable broth and served hot.' },
+      { id: 'sp-clear1', title: 'Clear Soup (Non-Veg)',price:"160", desc: 'Fresh Chicken cubes simmered in chicken broth and served hot.' },
       { id: 'sp-sweetcorn0', title: 'Sweet Corn Soup (Veg)',price:"140", desc: 'Creamy light corn blend with assorted vegetables.' },
       { id: 'sp-sweetcorn1', title: 'Sweet Corn Soup (Non-Veg)',price:"160", desc: 'Creamy light corn blend with assorted chicken.' },
-      { id: 'sp-hot&sour0', title:'Hot & Sour Soup',price:"140", desc: 'Mixed vegetable in a spicy soya-based soup.' },
-      { id: 'sp-hot&sour1', title:'Hot & Sour Soup',price:"160", desc: 'Mixed chicken in a spicy soya-based soup.' },
-      { id: 'sp-Manchow0', title: 'Manchow Soup',price:"140", desc: 'Thick vegetable soup served along crispy fried noodles.' },
-      { id: 'sp-Manchow0', title: 'Manchow Soup',price:"160", desc: 'Thick chicken soup served along crispy fried noodles.' },
-      { id: 'sp-Tomato/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable',price:"140/160", desc: 'Thick creamy soup served with your choice.' }
-      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Vegetable',price:"140/160", desc: 'Thick creamy soup served with your choice.' }
+      { id: 'sp-hot&sour0', title:'Hot & Sour Soup (Veg)',price:"140", desc: 'Mixed vegetable in a spicy soya-based soup.' },
+      { id: 'sp-hot&sour1', title:'Hot & Sour Soup (Non-Veg)',price:"160", desc: 'Mixed chicken in a spicy soya-based soup.' },
+      { id: 'sp-Manchow0', title: 'Manchow Soup (Veg)',price:"140", desc: 'Thick vegetable soup served along crispy fried noodles.' },
+      { id: 'sp-Manchow0', title: 'Manchow Soup (Non-Veg)',price:"160", desc: 'Thick chicken soup served along crispy fried noodles.' },
+      { id: 'sp-Tomato/Vegetable', title: 'Cream of Tomato/Mushroom/Vegetable',price:"140", desc: 'Thick creamy soup served with your choice.' }
+      { id: 'sp-Tomato/Mushroom/Vegetable', title: 'Cream of Tomato/Vegetable',price:"160", desc: 'Thick creamy soup served with your choice.' }
 
     ]
   },

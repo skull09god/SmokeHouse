@@ -828,3 +828,33 @@ body:before {
     display: none;
   } 
 }
+
+/* Smartphone Optimization Layer */
+@media (max-width: 600px) {
+  .section-wrap {
+    padding: 40px 16px;
+  }
+
+  .section-title {
+    margin-0: auto 32px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  /* On small mobile screens, stack cards in a clean, easily readable single column */
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Optimize card text padding parameters for thumb scroll ergonomics */
+  .page-card-footer {
+    padding: 16px;
+  }
+
+  .page-number {
+    font-size: 20px;
+  }
+}

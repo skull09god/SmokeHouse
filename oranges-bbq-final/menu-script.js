@@ -91,35 +91,14 @@ const menuSections = [
     ]
   },
   {
-  id: 'sec-combos',
-  label: 'Combo Section',
-  img: 'assets/pages/combo.jpeg',
-
-  categories: [
-
-
-    {
-      id: 'signature-specials',
-      title: 'Signature Orange Specials',
-
-      items: [
-        {
-          id: 'sp-orange-signature-smoke-combo',
-          title: 'Orange Signature Smoke Combo',
-          price: 699,
-          desc: 'Grilled chicken, chicken stroganoff, butter herb rice, garlic bread, sautéed vegetables & two signature sauces.'
-        },
-        {
-          id: 'sp-smoke-house-feast',
-          title: 'Smoke House Feast (Serves 2)',
-          price: 1299,
-          desc: 'BBQ chicken, grilled fish, herb rice, garlic bread, fries, salad & three signature sauces.'
-        }
-      ]
-    }
-
-  ]
-}
+    id: 'sec-combos',
+    label: 'Rice & Bread Combos',
+    img: 'assets/pages/combos.jpeg',
+    items: [
+      { id: 'cb-bbqbowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Charcoal grilled chicken thighs sliced over butter-steeped herb rice alongside rich peppercorn pan sauce sauce.' },
+      { id: 'cb-stroganoff', title: 'Chicken Stroganoff Combo', price: 499, desc: 'Creamy mushroom and chicken stroganoff reduction paired with buttered herb rice lines and toasted garlic bread.' }
+    ]
+  },
   {
     id: 'sec-platters',
     label: 'BBQ Platter Section',

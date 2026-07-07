@@ -128,6 +128,20 @@ const sectionBook = document.getElementById('sectionBook');
 
 // Mobile Menu References
 const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');// Shopping Cart Core Tracking Memory Mapping Schema Arrays
+let shoppingCart = {};
+
+// UI References Linkers
+const categoryGrid = document.getElementById('categoryCards');
+const viewer = document.getElementById('sectionViewer');
+const currentPaper = document.getElementById('currentPaper');
+const turningPaper = document.getElementById('turningPaper');
+const viewerCount = document.getElementById('viewerCount');
+const selectorItemsList = document.getElementById('selectorItemsList');
+const sectionBook = document.getElementById('sectionBook');
+
+// Mobile Menu References
+const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
 let activeIndex = 0;

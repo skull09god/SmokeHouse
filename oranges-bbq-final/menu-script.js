@@ -82,6 +82,35 @@ const menuSections = [
     id: 'sec-continental',
     label: 'Continental Menu',
     img: 'assets/pages/continental.jpeg',
+    items: [
+      { id: 'cn-lasagna', title: 'Baked Vegetarian Lasagna', price: 349, desc: 'Layered sheets of pasta loaded with minced garden vegetables, rich pomodoro, creamy bechamel & grilled cheese.' },
+      { id: 'cn-steak', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Juicy skillet grilled breast fillet served with dynamic seasonal vegetables side & rich herb emulsion.' }
+    ]
+  },
+  {
+    id: 'sec-sandwiches',
+    label: 'Club Sandwiches',
+    img: 'assets/pages/combo.jpeg',
+    items: [
+    { id: 'cs-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple layer grilled sandwich with grilled chicken, egg, lettuce, tomato, cucumber, cheese, bacon & mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Triple layer grilled sandwich with BBQ chicken, bacon, cheese, lettuce, tomato & mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-spicy', title: 'Spicy Club Sandwich Combo', price: 429, desc: 'Triple layer grilled sandwich with peri peri chicken, jalapeños, cheese, lettuce & spicy mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-extra-cheese', title: 'Extra Cheese', price: 40, desc: 'Add extra cheese to your club sandwich.' },
+
+    { id: 'cs-extra-chicken', title: 'Extra Chicken', price: 60, desc: 'Add extra grilled chicken to your club sandwich.' },
+
+    { id: 'cs-extra-bacon', title: 'Extra Bacon', price: 50, desc: 'Add crispy bacon strips to your club sandwich.' },
+
+    { id: 'cs-cold-coffee', title: 'Cold Coffee', price: 70, desc: 'Chilled creamy cold coffee served as an add-on beverage.' }
+  ]
+  },
+ {
+  id: 'sec-combos',
+  label: 'Orange Barbeque Combo Section',
+  img: 'assets/pages/combos.jpeg',
   items: [
     { id: 'rc-smoked-bbq-chicken-rice-bowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce.' },
 

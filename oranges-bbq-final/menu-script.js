@@ -4,12 +4,55 @@ const menuSections = [
     id: 'sec-seafood',
     label: 'Seafood Section',
     img: 'assets/pages/seafood.jpeg',
-    items: [
-      { id: 'sf-calamari', title: 'Crispy Calamari Rings', price: 349, desc: 'Crispy fried calamari served with signature tartar sauce.' },
-      { id: 'sf-popcorn', title: 'Prawn Popcorn', price: 399, desc: 'Crispy bite-sized prawns tossed with house spices & sweet chili dip.' },
-      { id: 'sf-garlic', title: 'Garlic Butter Prawns', price: 499, desc: 'Sautéed fresh prawns drowned in garlic butter fusion & fine aromatics.' },
-      { id: 'sf-platter', title: 'Premium Seafood Platter', price: 1299, desc: 'Grilled prawns, calamari rings, fish fillet, garlic bread, chips & custom house dips.' }
-    ]
+     items: [
+
+    // Seafood Starters
+    { id: 'sf-crispy-calamari-rings', title: 'Crispy Calamari Rings (10 pcs)', price: 349, desc: 'Crispy fried calamari served with tartar sauce.' },
+    { id: 'sf-prawn-popcorn', title: 'Prawn Popcorn (12 pcs)', price: 399, desc: 'Crispy bite-sized prawns tossed with spices & sweet chilli dip.' },
+    { id: 'sf-garlic-butter-prawns', title: 'Garlic Butter Prawns (8 pcs)', price: 499, desc: 'Sautéed prawns in garlic butter & herbs.' },
+    { id: 'sf-fish-fingers', title: 'Fish Fingers (6 pcs)', price: 349, desc: 'Golden fried fish fingers served with tartar sauce.' },
+    { id: 'sf-tandoori-prawns-starter', title: 'Tandoori Prawns (6 pcs)', price: 549, desc: 'Prawns marinated in tandoori spices and grilled to perfection.' },
+
+    // Seafood Main Course
+    { id: 'sf-grilled-fish', title: 'Grilled Fish (1 pc)', price: 599, desc: 'Herb or Peri Peri grilled fish served with lemon butter sauce, vegetables & mashed potato.' },
+    { id: 'sf-prawns-butter-garlic', title: 'Prawns Butter Garlic (8 pcs)', price: 599, desc: 'Prawns cooked in creamy butter garlic sauce, served with garlic bread.' },
+    { id: 'sf-fish-chips', title: 'Fish & Chips (2 pcs)', price: 549, desc: 'Crispy battered fish served with fries, coleslaw & tartar sauce.' },
+    { id: 'sf-calamari-grill', title: 'Calamari Grill (10 pcs)', price: 549, desc: 'Grilled calamari tossed in lemon garlic butter with herbs.' },
+    { id: 'sf-seafood-platter', title: 'Seafood Platter (Serves 2)', price: 1299, desc: 'Grilled prawns (4 pcs), calamari (6 pcs), mussels (6 pcs), fish (1 pc), garlic bread, fries & signature dips.' },
+
+    // Seafood Grills
+    { id: 'sf-tandoori-prawns-grill', title: 'Tandoori Prawns (6 pcs)', price: 549, desc: 'Marinated in tandoori spices and grilled to perfection.' },
+    { id: 'sf-peri-peri-prawns', title: 'Peri Peri Prawns (8 pcs)', price: 549, desc: 'Spicy peri peri marinated prawns grilled and served hot.' },
+    { id: 'sf-grilled-fish-steak', title: 'Grilled Fish Steak (1 pc)', price: 599, desc: 'Lemon or Herb grilled fish steak with herbs & spices.' },
+    { id: 'sf-fish-tikka', title: 'Fish Tikka (8 pcs)', price: 499, desc: 'Boneless fish cubes marinated in mild spices and grilled in tandoor.' },
+    { id: 'sf-mussels-garlic-butter', title: 'Mussels in Garlic Butter (12 pcs)', price: 499, desc: 'New Zealand mussels cooked in garlic butter sauce.' },
+
+    // Seafood Curries
+    { id: 'sf-prawn-curry', title: 'Prawn Curry (8 pcs)', price: 499, desc: 'Spicy prawns cooked in Indian style curry.' },
+    { id: 'sf-fish-curry', title: 'Fish Curry (2 pcs)', price: 449, desc: 'Fish cooked in traditional spicy curry.' },
+    { id: 'sf-prawn-malai-curry', title: 'Prawn Malai Curry (8 pcs)', price: 549, desc: 'Prawns simmered in creamy coconut gravy.' },
+
+    // Rice & Pasta
+    { id: 'sf-seafood-fried-rice', title: 'Seafood Fried Rice (Serves 1)', price: 399, desc: 'Prawns, calamari & fish stir-fried with rice & vegetables.' },
+    { id: 'sf-prawn-biryani', title: 'Prawn Biryani (Serves 1)', price: 449, desc: 'Aromatic biryani cooked with prawns.' },
+    { id: 'sf-seafood-pasta', title: 'Seafood Pasta (Serves 1)', price: 449, desc: 'Pasta tossed with prawns, calamari in creamy white sauce.' },
+
+    // Seafood Combos
+    { id: 'sf-sea-breeze-combo', title: 'Sea Breeze Combo (Serves 1)', price: 699, desc: 'Grilled fish (1 pc), prawns (4 pcs), butter garlic rice, garlic bread & refreshing drink.' },
+    { id: 'sf-ocean-feast-combo', title: 'Ocean Feast Combo (Serves 2)', price: 999, desc: 'Grilled prawns (6 pcs), calamari (6 pcs), fish tikka (8 pcs), fries, coleslaw, garlic bread & two refreshing drinks.' },
+
+    // Add-ons
+    { id: 'sf-extra-garlic-bread', title: 'Extra Garlic Bread (2 pcs)', price: 79, desc: 'Freshly toasted garlic bread.' },
+    { id: 'sf-extra-tartar-sauce', title: 'Extra Tartar Sauce', price: 49, desc: 'Creamy tartar dipping sauce.' },
+    { id: 'sf-extra-rice', title: 'Extra Rice', price: 99, desc: 'Steamed rice.' },
+
+    // Dips & Sauces
+    { id: 'sf-tartar-sauce', title: 'Tartar Sauce', price: 0, desc: 'Classic tartar dipping sauce.' },
+    { id: 'sf-garlic-mayo', title: 'Garlic Mayo', price: 0, desc: 'Creamy garlic mayonnaise.' },
+    { id: 'sf-peri-peri-sauce', title: 'Peri Peri Sauce', price: 0, desc: 'Spicy peri peri sauce.' },
+    { id: 'sf-sweet-chilli-sauce', title: 'Sweet Chilli Sauce', price: 0, desc: 'Sweet & spicy chilli sauce.' }
+
+  ]
   },
   {
     id: 'sec-buffet',

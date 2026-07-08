@@ -414,7 +414,7 @@ const menuSections = [
  {
   id: "sec-club-sandwich",
   label: "Club Sandwich Combo",
-  img: "assets/pages/club-sandwich.jpeg",
+  img: "assets/pages/combo.jpeg",
 
   categories: [
 
@@ -513,7 +513,7 @@ const menuSections = [
 {
   id: "sec-orange-combos",
   label: "Orange Barbeque Combos",
-  img: "assets/pages/orange-combos.jpeg",
+  img: "assets/pages/combos.jpeg",
 
   categories: [
 

@@ -741,8 +741,89 @@ function closeViewer() {
 
 // Generate the item interactive inputs on right-side column panel
 function renderItemSelectorsForSection(section) {
+
+  // Sections having categories
+  if (section.categories && Array.isArray(section.categories)) {
+
+    selectorItemsList.innerHTML = section.categories.map(category => {
+
+      return `
+        <div class="menu-sub-category">
+          <h3 class="subcategory-title">${category.title}</h3>
+
+          ${category.items.map(item => {
+
+            const currentQty = shoppingCart[item.id]
+              ? shoppingCart[item.id].qty
+              : 0;
+
+            const priceText =
+              typeof item.price === "object"
+                ? `₹${item.price.regular} / ₹${item.price.large}`
+                : item.price == null
+                  ? ""
+                  : `₹${item.price}`;
+
+            const plusPrice =
+              typeof item.price === "object"
+                ? item.price.regular
+                : (item.price || 0);
+
+            return `
+              <div class="menu-item-row">
+                <div class="item-details">
+
+                  <div class="item-title-line">
+                    <h4>${item.title}</h4>
+                    <span class="item-price">${priceText}</span>
+                  </div>
+
+                  <p class="item-desc">${item.desc}</p>
+
+                </div>
+
+                ${
+                  item.price == null
+                    ? ""
+                    : `
+                    <div class="quantity-control">
+                      <button class="qty-btn"
+                        onclick="modifyCartItemQty('${item.id}','${escapeHtml(item.title)}',${plusPrice},-1)">
+                        -
+                      </button>
+
+                      <span class="qty-val" id="qty-modal-${item.id}">
+                        ${currentQty}
+                      </span>
+
+                      <button class="qty-btn"
+                        onclick="modifyCartItemQty('${item.id}','${escapeHtml(item.title)}',${plusPrice},1)">
+                        +
+                      </button>
+                    </div>
+                  `
+                }
+
+              </div>
+            `;
+
+          }).join("")}
+
+        </div>
+      `;
+
+    }).join("");
+
+    return;
+  }
+
+  // Old sections having direct items
   selectorItemsList.innerHTML = section.items.map(item => {
-    const currentQty = shoppingCart[item.id] ? shoppingCart[item.id].qty : 0;
+
+    const currentQty = shoppingCart[item.id]
+      ? shoppingCart[item.id].qty
+      : 0;
+
     return `
       <div class="menu-item-row">
         <div class="item-details">
@@ -752,14 +833,27 @@ function renderItemSelectorsForSection(section) {
           </div>
           <p class="item-desc">${item.desc}</p>
         </div>
+
         <div class="quantity-control">
-          <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, -1)">-</button>
-          <span class="qty-val" id="qty-modal-${item.id}">${currentQty}</span>
-          <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, 1)">+</button>
+          <button class="qty-btn"
+            onclick="modifyCartItemQty('${item.id}','${escapeHtml(item.title)}',${item.price},-1)">
+            -
+          </button>
+
+          <span class="qty-val" id="qty-modal-${item.id}">
+            ${currentQty}
+          </span>
+
+          <button class="qty-btn"
+            onclick="modifyCartItemQty('${item.id}','${escapeHtml(item.title)}',${item.price},1)">
+            +
+          </button>
         </div>
+
       </div>
     `;
-  }).join('');
+
+  }).join("");
 }
 
 // Mapped Slide Page Navigation Engine controls algorithms

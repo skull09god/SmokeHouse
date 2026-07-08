@@ -265,6 +265,10 @@ function closeViewer() {
 function renderItemSelectorsForSection(section) {
   selectorItemsList.innerHTML = section.items.map(item => {
     const currentQty = shoppingCart[item.id] ? shoppingCart[item.id].qty : 0;
+    
+    // Check if the current section is the Barbeque Buffet
+    const isBuffetSection = section.id === 'sec-buffet';
+
     return `
       <div class="menu-item-row">
         <div class="item-details">
@@ -274,11 +278,17 @@ function renderItemSelectorsForSection(section) {
           </div>
           <p class="item-desc">${item.desc}</p>
         </div>
-        <div class="quantity-control">
-          <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, -1)">-</button>
-          <span class="qty-val" id="qty-modal-${item.id}">${currentQty}</span>
-          <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, 1)">+</button>
-        </div>
+        ${
+          isBuffetSection 
+            ? `` 
+            : `
+            <div class="quantity-control">
+              <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, -1)">-</button>
+              <span class="qty-val" id="qty-modal-${item.id}">${currentQty}</span>
+              <button class="qty-btn" onclick="modifyCartItemQty('${item.id}', '${escapeHtml(item.title)}', ${item.price}, 1)">+</button>
+            </div>
+            `
+        }
       </div>
     `;
   }).join('');

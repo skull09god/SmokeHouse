@@ -69,15 +69,339 @@ const menuSections = [
     ]
   },
   {
-    id: 'sec-pizza-burger',
-    label: 'Pizzas & Burgers',
-    img: 'assets/pages/pizza.jpeg',
-    items: [
-      { id: 'pz-margherita', title: 'Classic Margherita Pizza (Regular)', price: 299, desc: 'Woodfired fresh tomato baseline sauce layout loaded heavily with artisanal mozzarella & fresh basil.' },
-      { id: 'pz-bbqchick', title: 'BBQ Chicken Pizza (Large)', price: 649, desc: 'House smoked tender chicken chunks, red onions, grilled capsicum over premium sweet BBQ baseline drizzle.' },
-      { id: 'bg-orange', title: 'Orange Special BBQ Burger', price: 249, desc: 'Seared chicken patty, crispy fried onion rings layer, melted cheddar slice, house signature master sauce.' }
-    ]
-  },
+  id: "sec-pizza-burger",
+  label: "Pizza & Burger Menu",
+  img: "assets/pages/pizza.jpeg",
+
+  categories: [
+
+    {
+      id: "classic-pizzas",
+      title: "Classic Pizzas",
+
+      items: [
+        {
+          id: "margherita",
+          title: "Margherita",
+          price: {
+            regular: 299,
+            large: 499
+          },
+          desc: "Classic delight with fresh tomato sauce, mozzarella & basil."
+        },
+        {
+          id: "farmhouse",
+          title: "Farmhouse",
+          price: {
+            regular: 349,
+            large: 549
+          },
+          desc: "Capsicum, onion, mushroom, tomato, sweet corn & olives."
+        },
+        {
+          id: "paneer-tikka",
+          title: "Paneer Tikka",
+          price: {
+            regular: 399,
+            large: 599
+          },
+          desc: "Spicy paneer tikka, onion, capsicum, green chilli & cheese."
+        },
+        {
+          id: "chicken-tikka",
+          title: "Chicken Tikka",
+          price: {
+            regular: 449,
+            large: 649
+          },
+          desc: "Chicken tikka, onion, capsicum & mozzarella cheese."
+        },
+        {
+          id: "bbq-chicken-pizza",
+          title: "BBQ Chicken",
+          price: {
+            regular: 449,
+            large: 649
+          },
+          desc: "Grilled chicken, BBQ sauce, onion, capsicum & cheese."
+        },
+        {
+          id: "pepperoni",
+          title: "Pepperoni",
+          price: {
+            regular: 449,
+            large: 649
+          },
+          desc: "Classic pepperoni with mozzarella cheese."
+        }
+      ]
+    },
+
+    {
+      id: "premium-pizzas",
+      title: "Premium Pizzas",
+
+      items: [
+        {
+          id: "meat-lovers",
+          title: "Meat Lovers",
+          price: {
+            regular: 499,
+            large: 699
+          },
+          desc: "Chicken, pepperoni, mutton chunks, sausages & cheese."
+        },
+        {
+          id: "seafood-supreme",
+          title: "Seafood Supreme",
+          price: {
+            regular: 549,
+            large: 749
+          },
+          desc: "Prawns, calamari, fish, crab sticks, olives & cheese."
+        },
+        {
+          id: "exotic-veg",
+          title: "Exotic Veg",
+          price: {
+            regular: 449,
+            large: 649
+          },
+          desc: "Roasted bell peppers, zucchini, jalapeños, olives & feta cheese."
+        }
+      ]
+    },
+
+    {
+      id: "signature-burgers",
+      title: "Signature Burgers",
+
+      items: [
+        {
+          id: "orange-bbq-burger",
+          title: "Orange BBQ Burger",
+          price: 249,
+          desc: "Grilled chicken patty, BBQ sauce, cheese, onion rings, lettuce & mayo."
+        },
+        {
+          id: "cheese-burger",
+          title: "Cheese Burger",
+          price: 229,
+          desc: "Juicy chicken patty, cheese, lettuce, tomato, onion & burger mayo."
+        },
+        {
+          id: "spicy-peri-peri-burger",
+          title: "Spicy Peri Peri Burger",
+          price: 249,
+          desc: "Peri peri grilled patty, spicy mayo, lettuce, tomato & onion."
+        },
+        {
+          id: "crispy-chicken-burger",
+          title: "Crispy Chicken Burger",
+          price: 239,
+          desc: "Crispy fried chicken, lettuce, cheese, pickles & garlic mayo."
+        },
+        {
+          id: "veg-delight-burger",
+          title: "Veg Delight Burger",
+          price: 199,
+          desc: "Veg patty, lettuce, tomato, onion, cheese & burger mayo."
+        },
+        {
+          id: "double-decker-burger",
+          title: "Double Decker Burger",
+          price: 299,
+          desc: "Double chicken patty, cheese, lettuce, tomato, onion & special sauce."
+        }
+      ]
+    },
+
+    {
+      id: "burger-combos",
+      title: "Burger Combos",
+
+      items: [
+        {
+          id: "cheese-burger-combo",
+          title: "Cheese Burger Combo",
+          price: 299,
+          desc: "Cheese Burger + Fries + Drink."
+        },
+        {
+          id: "crispy-chicken-combo",
+          title: "Crispy Chicken Burger Combo",
+          price: 309,
+          desc: "Crispy Chicken Burger + Fries + Drink."
+        },
+        {
+          id: "peri-peri-combo",
+          title: "Spicy Peri Peri Burger Combo",
+          price: 319,
+          desc: "Spicy Peri Peri Burger + Fries + Drink."
+        },
+        {
+          id: "double-decker-combo",
+          title: "Double Decker Burger Combo",
+          price: 359,
+          desc: "Double Decker Burger + Fries + Drink."
+        }
+      ]
+    },
+
+    {
+      id: "extras",
+      title: "Extras",
+
+      items: [
+        {
+          id: "french-fries",
+          title: "French Fries",
+          price: 99,
+          desc: "Classic crispy french fries."
+        },
+        {
+          id: "cheesy-fries",
+          title: "Cheesy Fries",
+          price: 129,
+          desc: "French fries topped with melted cheese."
+        },
+        {
+          id: "onion-rings",
+          title: "Onion Rings (6 pcs)",
+          price: 99,
+          desc: "Crispy battered onion rings."
+        },
+        {
+          id: "chicken-nuggets",
+          title: "Chicken Nuggets (6 pcs)",
+          price: 129,
+          desc: "Golden fried chicken nuggets."
+        }
+      ]
+    },
+
+    {
+      id: "drinks",
+      title: "Drinks",
+
+      items: [
+        {
+          id: "pepsi",
+          title: "Pepsi / 7Up / Mirinda",
+          price: 59,
+          desc: "Soft drink."
+        },
+        {
+          id: "fresh-lime",
+          title: "Fresh Lime Soda",
+          price: 79,
+          desc: "Refreshing lime soda."
+        },
+        {
+          id: "iced-tea",
+          title: "Iced Tea (Peach/Lemon)",
+          price: 79,
+          desc: "Chilled flavoured iced tea."
+        },
+        {
+          id: "mineral-water",
+          title: "Mineral Water",
+          price: 29,
+          desc: "Packaged drinking water."
+        }
+      ]
+    },
+
+    {
+      id: "addons",
+      title: "Add-ons",
+
+      items: [
+        {
+          id: "extra-cheese",
+          title: "Extra Cheese",
+          price: 60,
+          desc: "Add extra cheese."
+        },
+        {
+          id: "chicken-tikka-addon",
+          title: "Chicken Tikka",
+          price: 80,
+          desc: "Additional chicken tikka topping."
+        },
+        {
+          id: "paneer-tikka-addon",
+          title: "Paneer Tikka",
+          price: 70,
+          desc: "Additional paneer tikka topping."
+        },
+        {
+          id: "pepperoni-addon",
+          title: "Pepperoni (6 pcs)",
+          price: 70,
+          desc: "Extra pepperoni slices."
+        },
+        {
+          id: "olives-addon",
+          title: "Olives",
+          price: 40,
+          desc: "Fresh olives."
+        },
+        {
+          id: "mushroom-addon",
+          title: "Mushroom",
+          price: 40,
+          desc: "Fresh mushroom topping."
+        },
+        {
+          id: "jalapenos-addon",
+          title: "Jalapeños",
+          price: 30,
+          desc: "Spicy jalapeño slices."
+        }
+      ]
+    },
+
+    {
+      id: "sauces",
+      title: "Sauces",
+
+      items: [
+        {
+          id: "peri-peri-sauce",
+          title: "Peri Peri Sauce",
+          price: null,
+          desc: "Signature peri peri dip."
+        },
+        {
+          id: "garlic-sauce",
+          title: "Garlic Sauce",
+          price: null,
+          desc: "Creamy garlic dip."
+        },
+        {
+          id: "bbq-sauce",
+          title: "BBQ Sauce",
+          price: null,
+          desc: "Smoky barbecue sauce."
+        },
+        {
+          id: "cheesy-dip",
+          title: "Cheesy Dip",
+          price: null,
+          desc: "Creamy cheese dip."
+        },
+        {
+          id: "tomato-ketchup",
+          title: "Tomato Ketchup",
+          price: null,
+          desc: "Classic tomato ketchup."
+        }
+      ]
+    }
+
+  ]
+},
   {
     id: 'sec-continental',
     label: 'Continental Menu',

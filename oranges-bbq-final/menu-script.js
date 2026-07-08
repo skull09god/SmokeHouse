@@ -73,10 +73,87 @@ const menuSections = [
     label: 'Pizzas & Burgers',
     img: 'assets/pages/pizza.jpeg',
     items: [
-      { id: 'pz-margherita', title: 'Classic Margherita Pizza (Regular)', price: 299, desc: 'Woodfired fresh tomato baseline sauce layout loaded heavily with artisanal mozzarella & fresh basil.' },
-      { id: 'pz-bbqchick', title: 'BBQ Chicken Pizza (Large)', price: 649, desc: 'House smoked tender chicken chunks, red onions, grilled capsicum over premium sweet BBQ baseline drizzle.' },
-      { id: 'bg-orange', title: 'Orange Special BBQ Burger', price: 249, desc: 'Seared chicken patty, crispy fried onion rings layer, melted cheddar slice, house signature master sauce.' }
-    ]
+
+    // ===== Classic Pizzas =====
+    { id: 'cp-margherita-regular', title: 'Margherita Pizza (Regular)', price: 299, desc: 'Classic delight with fresh tomato sauce, mozzarella & basil.' },
+    { id: 'cp-margherita-large', title: 'Margherita Pizza (Large)', price: 499, desc: 'Classic delight with fresh tomato sauce, mozzarella & basil.' },
+
+    { id: 'cp-farmhouse-regular', title: 'Farmhouse Pizza (Regular)', price: 349, desc: 'Capsicum, onion, mushroom, tomato, sweet corn & olives.' },
+    { id: 'cp-farmhouse-large', title: 'Farmhouse Pizza (Large)', price: 549, desc: 'Capsicum, onion, mushroom, tomato, sweet corn & olives.' },
+
+    { id: 'cp-paneer-tikka-regular', title: 'Paneer Tikka Pizza (Regular)', price: 399, desc: 'Spicy paneer tikka, onion, capsicum, green chilli & cheese.' },
+    { id: 'cp-paneer-tikka-large', title: 'Paneer Tikka Pizza (Large)', price: 599, desc: 'Spicy paneer tikka, onion, capsicum, green chilli & cheese.' },
+
+    { id: 'cp-chicken-tikka-regular', title: 'Chicken Tikka Pizza (Regular)', price: 449, desc: 'Chicken tikka, onion, capsicum & mozzarella cheese.' },
+    { id: 'cp-chicken-tikka-large', title: 'Chicken Tikka Pizza (Large)', price: 649, desc: 'Chicken tikka, onion, capsicum & mozzarella cheese.' },
+
+    { id: 'cp-bbq-chicken-regular', title: 'BBQ Chicken Pizza (Regular)', price: 449, desc: 'Grilled chicken, BBQ sauce, onion, capsicum & cheese.' },
+    { id: 'cp-bbq-chicken-large', title: 'BBQ Chicken Pizza (Large)', price: 649, desc: 'Grilled chicken, BBQ sauce, onion, capsicum & cheese.' },
+
+    { id: 'cp-pepperoni-regular', title: 'Pepperoni Pizza (Regular)', price: 449, desc: 'Classic pepperoni with mozzarella cheese.' },
+    { id: 'cp-pepperoni-large', title: 'Pepperoni Pizza (Large)', price: 649, desc: 'Classic pepperoni with mozzarella cheese.' },
+
+    // ===== Premium Pizzas =====
+    { id: 'pp-meat-lovers-regular', title: 'Meat Lovers Pizza (Regular)', price: 499, desc: 'Chicken, pepperoni, mutton chunks, sausages & cheese.' },
+    { id: 'pp-meat-lovers-large', title: 'Meat Lovers Pizza (Large)', price: 699, desc: 'Chicken, pepperoni, mutton chunks, sausages & cheese.' },
+
+    { id: 'pp-seafood-supreme-regular', title: 'Seafood Supreme Pizza (Regular)', price: 549, desc: 'Prawns, calamari, fish, crab sticks, olives & cheese.' },
+    { id: 'pp-seafood-supreme-large', title: 'Seafood Supreme Pizza (Large)', price: 749, desc: 'Prawns, calamari, fish, crab sticks, olives & cheese.' },
+
+    { id: 'pp-exotic-veg-regular', title: 'Exotic Veg Pizza (Regular)', price: 449, desc: 'Roasted bell peppers, zucchini, jalapeños, olives & feta cheese.' },
+    { id: 'pp-exotic-veg-large', title: 'Exotic Veg Pizza (Large)', price: 649, desc: 'Roasted bell peppers, zucchini, jalapeños, olives & feta cheese.' },
+
+    // ===== Signature Burgers =====
+    { id: 'bg-orange-bbq', title: 'Orange BBQ Burger', price: 249, desc: 'Grilled chicken patty, BBQ sauce, cheese, onion rings, lettuce & mayo. Served with fries & a soft drink.' },
+
+    { id: 'bg-cheese', title: 'Cheese Burger', price: 229, desc: 'Juicy chicken patty, cheese, lettuce, tomato, onion & burger mayo. Served with fries & a soft drink.' },
+
+    { id: 'bg-spicy-peri-peri', title: 'Spicy Peri Peri Burger', price: 249, desc: 'Peri peri grilled patty, spicy mayo, lettuce, tomato & onion. Served with fries & a soft drink.' },
+
+    { id: 'bg-crispy-chicken', title: 'Crispy Chicken Burger', price: 239, desc: 'Crispy fried chicken, lettuce, cheese, pickles & garlic mayo. Served with fries & a soft drink.' },
+
+    { id: 'bg-veg-delight', title: 'Veg Delight Burger', price: 199, desc: 'Veg patty, lettuce, tomato, onion, cheese & burger mayo. Served with fries & a soft drink.' },
+
+    { id: 'bg-double-decker', title: 'Double Decker Burger', price: 299, desc: 'Double chicken patty, cheese, lettuce, tomato, onion & special sauce. Served with fries & a soft drink.' },
+
+    // ===== Burger Combos =====
+    { id: 'bc-cheese', title: 'Cheese Burger Combo', price: 299, desc: 'Cheese Burger served with French fries & a soft drink.' },
+
+    { id: 'bc-crispy-chicken', title: 'Crispy Chicken Burger Combo', price: 309, desc: 'Crispy Chicken Burger served with French fries & a soft drink.' },
+
+    { id: 'bc-spicy-peri-peri', title: 'Spicy Peri Peri Burger Combo', price: 319, desc: 'Spicy Peri Peri Burger served with French fries & a soft drink.' },
+
+    { id: 'bc-double-decker', title: 'Double Decker Burger Combo', price: 359, desc: 'Double Decker Burger served with French fries & a soft drink.' },
+
+    // ===== Pizza Add-ons =====
+    { id: 'ad-extra-cheese', title: 'Extra Cheese', price: 60, desc: 'Add extra mozzarella cheese.' },
+    { id: 'ad-chicken-tikka', title: 'Chicken Tikka', price: 80, desc: 'Extra chicken tikka topping.' },
+    { id: 'ad-paneer-tikka', title: 'Paneer Tikka', price: 70, desc: 'Extra paneer tikka topping.' },
+    { id: 'ad-pepperoni', title: 'Pepperoni (6 pcs)', price: 70, desc: 'Extra pepperoni slices.' },
+    { id: 'ad-olives', title: 'Olives', price: 40, desc: 'Extra olives.' },
+    { id: 'ad-mushroom', title: 'Mushroom', price: 40, desc: 'Extra mushrooms.' },
+    { id: 'ad-jalapenos', title: 'Jalapeños', price: 30, desc: 'Extra jalapeños.' },
+
+    // ===== Sauces =====
+    { id: 'sc-peri-peri', title: 'Peri Peri Sauce', price: 0, desc: 'Signature peri peri dipping sauce.' },
+    { id: 'sc-garlic', title: 'Garlic Sauce', price: 0, desc: 'Creamy garlic dipping sauce.' },
+    { id: 'sc-bbq', title: 'BBQ Sauce', price: 0, desc: 'Classic smoky BBQ sauce.' },
+    { id: 'sc-cheesy-dip', title: 'Cheesy Dip', price: 0, desc: 'Rich cheesy dipping sauce.' },
+    { id: 'sc-ketchup', title: 'Tomato Ketchup', price: 0, desc: 'Classic tomato ketchup.' },
+
+    // ===== Extras =====
+    { id: 'ex-french-fries', title: 'French Fries', price: 99, desc: 'Golden crispy french fries.' },
+    { id: 'ex-cheesy-fries', title: 'Cheesy Fries', price: 129, desc: 'French fries topped with cheese.' },
+    { id: 'ex-onion-rings', title: 'Onion Rings (6 pcs)', price: 99, desc: 'Crispy onion rings.' },
+    { id: 'ex-chicken-nuggets', title: 'Chicken Nuggets (6 pcs)', price: 129, desc: 'Crispy chicken nuggets.' },
+
+    // ===== Drinks =====
+    { id: 'dr-soft-drink', title: 'Pepsi / 7UP / Mirinda', price: 59, desc: 'Choice of soft drink.' },
+    { id: 'dr-fresh-lime', title: 'Fresh Lime Soda', price: 79, desc: 'Refreshing fresh lime soda.' },
+    { id: 'dr-iced-tea', title: 'Iced Tea (Peach / Lemon)', price: 79, desc: 'Chilled peach or lemon iced tea.' },
+    { id: 'dr-mineral-water', title: 'Mineral Water', price: 29, desc: 'Packaged drinking water.' }
+
+  ]
   },
   {
     id: 'sec-continental',

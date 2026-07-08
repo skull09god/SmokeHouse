@@ -83,9 +83,44 @@ const menuSections = [
     label: 'Continental Menu',
     img: 'assets/pages/continental.jpeg',
     items: [
-      { id: 'cn-lasagna', title: 'Baked Vegetarian Lasagna', price: 349, desc: 'Layered sheets of pasta loaded with minced garden vegetables, rich pomodoro, creamy bechamel & grilled cheese.' },
-      { id: 'cn-steak', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Juicy skillet grilled breast fillet served with dynamic seasonal vegetables side & rich herb emulsion.' }
-    ]
+    { id: 'sl-caesar-veg', title: 'Caesar Salad (Veg)', price: 249, desc: 'Crisp lettuce, parmesan, croutons & caesar dressing.' },
+    { id: 'sl-caesar-chicken', title: 'Caesar Salad (Chicken)', price: 299, desc: 'Crisp lettuce, parmesan, croutons & caesar dressing.' },
+    { id: 'sl-greek-salad', title: 'Greek Salad', price: 249, desc: 'Cucumber, bell peppers, olives, feta cheese & olive oil.' },
+    { id: 'sl-garden-fresh-salad', title: 'Garden Fresh Salad', price: 199, desc: 'Fresh seasonal vegetables with house dressing.' },
+
+    { id: 'st-garlic-bread', title: 'Garlic Bread', price: 149, desc: 'Toasted bread with garlic butter.' },
+    { id: 'st-cheesy-garlic-bread', title: 'Cheesy Garlic Bread', price: 179, desc: 'Garlic bread topped with melted cheese.' },
+    { id: 'st-bruschetta', title: 'Bruschetta (Veg)', price: 199, desc: 'Toasted bread topped with tomato, basil, olive oil & herbs.' },
+    { id: 'st-stuffed-mushrooms', title: 'Stuffed Mushrooms', price: 229, desc: 'Mushrooms stuffed with herbed cheese & baked.' },
+    { id: 'st-chicken-wings', title: 'Chicken Wings (BBQ / Peri Peri)', price: 299, desc: 'Grilled chicken wings tossed in your choice of BBQ or Peri Peri sauce.' },
+    { id: 'st-calamari-rings', title: 'Calamari Rings', price: 299, desc: 'Crispy fried calamari served with tartar sauce.' },
+
+    { id: 'cr-veg-fried-rice', title: 'Veg Fried Rice', price: 249, desc: 'Stir-fried rice with mixed vegetables & herbs.' },
+    { id: 'cr-chicken-fried-rice', title: 'Chicken Fried Rice', price: 299, desc: 'Stir-fried rice with chicken, vegetables & herbs.' },
+    { id: 'cr-steamed-rice', title: 'Steamed Rice', price: 149, desc: 'Plain steamed rice.' },
+    { id: 'cr-herb-rice', title: 'Herb Rice', price: 179, desc: 'Steamed rice tossed with aromatic herbs.' },
+
+    { id: 'mc-grilled-chicken-herb', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Grilled chicken served with creamy herb sauce. Served with garlic bread & vegetables.' },
+    { id: 'mc-chicken-schnitzel', title: 'Chicken Schnitzel', price: 449, desc: 'Breaded chicken cutlet served with fries & salad.' },
+    { id: 'mc-fish-chips', title: 'Fish & Chips', price: 449, desc: 'Crispy fried fish served with fries, tartar sauce & salad.' },
+    { id: 'mc-grilled-fish-lemon-butter', title: 'Grilled Fish with Lemon Butter Sauce', price: 499, desc: 'Grilled fish topped with lemon butter sauce.' },
+    { id: 'mc-veg-lasagna', title: 'Veg Lasagna', price: 349, desc: 'Layers of pasta, vegetables & cheese baked to perfection.' },
+
+    { id: 'sd-french-fries', title: 'French Fries', price: 149, desc: 'Golden crispy french fries.' },
+    { id: 'sd-mashed-potato', title: 'Mashed Potato', price: 169, desc: 'Creamy mashed potatoes.' },
+    { id: 'sd-sauteed-vegetables', title: 'Sauteed Vegetables', price: 189, desc: 'Fresh vegetables sautéed with herbs.' },
+    { id: 'sd-cheesy-fries', title: 'Cheesy Fries', price: 199, desc: 'French fries topped with melted cheese.' },
+
+    { id: 'sc-pepper-sauce', title: 'Pepper Sauce', price: 99, desc: 'Classic pepper sauce.' },
+    { id: 'sc-mushroom-sauce', title: 'Mushroom Sauce', price: 99, desc: 'Creamy mushroom sauce.' },
+    { id: 'sc-herb-sauce', title: 'Herb Sauce', price: 99, desc: 'Creamy herb sauce.' },
+    { id: 'sc-bbq-sauce', title: 'BBQ Sauce', price: 99, desc: 'Signature smoky BBQ sauce.' },
+    { id: 'sc-lemon-butter-sauce', title: 'Lemon Butter Sauce', price: 99, desc: 'Rich buttery lemon sauce.' },
+
+    { id: 'ds-chocolate-brownie', title: 'Chocolate Brownie with Ice Cream', price: 199, desc: 'Warm brownie served with vanilla ice cream & chocolate sauce.' },
+    { id: 'ds-tiramisu', title: 'Tiramisu', price: 199, desc: 'Classic Italian dessert with coffee & mascarpone.' },
+    { id: 'ds-new-york-cheesecake', title: 'New York Cheesecake with Berry Compote', price: 199, desc: 'Creamy cheesecake topped with berry compote.' }
+  ]
   },
   {
     id: 'sec-sandwiches',

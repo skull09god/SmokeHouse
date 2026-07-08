@@ -69,7 +69,8 @@ const menuSections = [
       { id: 'ps-aglio', title: 'Pasta Aglio Olio (Veg)', price: 249, desc: 'Olive oil,  garlic, chilli flakes,herbes & parmesan.' },
       { id: 'ps-arrabbiata', title: 'Pasta Arrabbiata (Veg)', price: 279, desc: 'Spicy tomato sauce with herbs & parmesan.' },
       { id: 'ps-alfredo', title: 'Pasta Alfredo (Chicken)', price: 349, desc: 'Creamy white sauce with parmesan &herbs.' },
-      {id: 'ps-napoli', title: 'Pasta Napoli (Veg/Chicken)', price: "279/329", desc: 'Classic tomato basil sauce with parmesan.' },
+      {id: 'ps-napoli', title: 'Pasta Napoli (Veg)', price: "279", desc: 'Classic tomato basil sauce with parmesan.' },
+      {id: 'ps-napol', title: 'Pasta Napoli (Chicken)', price: "329", desc: 'Classic tomato basil sauce with parmesan.' },
       { id: 'ps-primavera', title: 'Pasta Primavera (Veg)', price: 299, desc: 'Pasta with mixed vegetables in a light creamy or tomato sauce.' },
     ]
   },

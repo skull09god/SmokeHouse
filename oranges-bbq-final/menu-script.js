@@ -92,9 +92,20 @@ const menuSections = [
     label: 'Club Sandwiches',
     img: 'assets/pages/combo.jpeg',
     items: [
-      { id: 'sd-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple decker toast stuffed with chicken salad, fried egg, lettuce, tomato & mayo. Includes fries + drink.' },
-      { id: 'sd-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Smoked hickory BBQ shredded chicken chunks layered with crisp hickory bacon, cheddar & house spreads.' }
-    ]
+    { id: 'cs-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple layer grilled sandwich with grilled chicken, egg, lettuce, tomato, cucumber, cheese, bacon & mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Triple layer grilled sandwich with BBQ chicken, bacon, cheese, lettuce, tomato & mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-spicy', title: 'Spicy Club Sandwich Combo', price: 429, desc: 'Triple layer grilled sandwich with peri peri chicken, jalapeños, cheese, lettuce & spicy mayo. Served with crispy fries, coleslaw and a refreshing soft drink.' },
+
+    { id: 'cs-extra-cheese', title: 'Extra Cheese', price: 40, desc: 'Add extra cheese to your club sandwich.' },
+
+    { id: 'cs-extra-chicken', title: 'Extra Chicken', price: 60, desc: 'Add extra grilled chicken to your club sandwich.' },
+
+    { id: 'cs-extra-bacon', title: 'Extra Bacon', price: 50, desc: 'Add crispy bacon strips to your club sandwich.' },
+
+    { id: 'cs-cold-coffee', title: 'Cold Coffee', price: 70, desc: 'Chilled creamy cold coffee served as an add-on beverage.' }
+  ]
   },
  {
   id: 'sec-combos',

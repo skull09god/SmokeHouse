@@ -176,11 +176,11 @@ const menuSections = [
     { id: 'ad-jalapenos', title: 'Jalapeños', price: 30, desc: 'Extra jalapeños.' },
 
     // ===== Sauces =====
-    { id: 'sc-peri-peri', title: 'Peri Peri Sauce', price: 0, desc: 'Signature peri peri dipping sauce.' },
-    { id: 'sc-garlic', title: 'Garlic Sauce', price: 0, desc: 'Creamy garlic dipping sauce.' },
-    { id: 'sc-bbq', title: 'BBQ Sauce', price: 0, desc: 'Classic smoky BBQ sauce.' },
-    { id: 'sc-cheesy-dip', title: 'Cheesy Dip', price: 0, desc: 'Rich cheesy dipping sauce.' },
-    { id: 'sc-ketchup', title: 'Tomato Ketchup', price: 0, desc: 'Classic tomato ketchup.' },
+    // { id: 'sc-peri-peri', title: 'Peri Peri Sauce', price: 0, desc: 'Signature peri peri dipping sauce.' },
+    // { id: 'sc-garlic', title: 'Garlic Sauce', price: 0, desc: 'Creamy garlic dipping sauce.' },
+    // { id: 'sc-bbq', title: 'BBQ Sauce', price: 0, desc: 'Classic smoky BBQ sauce.' },
+    // { id: 'sc-cheesy-dip', title: 'Cheesy Dip', price: 0, desc: 'Rich cheesy dipping sauce.' },
+    // { id: 'sc-ketchup', title: 'Tomato Ketchup', price: 0, desc: 'Classic tomato ketchup.' },
 
     // ===== Extras =====
     { id: 'ex-french-fries', title: 'French Fries', price: 99, desc: 'Golden crispy french fries.' },

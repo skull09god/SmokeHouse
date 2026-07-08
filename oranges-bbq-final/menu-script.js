@@ -411,43 +411,208 @@ const menuSections = [
       { id: 'cn-steak', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Juicy skillet grilled breast fillet served with dynamic seasonal vegetables side & rich herb emulsion.' }
     ]
   },
-  {
-    id: 'sec-sandwiches',
-    label: 'Club Sandwiches',
-    img: 'assets/pages/combo.jpeg',
-    items: [
-      { id: 'sd-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple decker toast stuffed with chicken salad, fried egg, lettuce, tomato & mayo. Includes fries + drink.' },
-      { id: 'sd-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Smoked hickory BBQ shredded chicken chunks layered with crisp hickory bacon, cheddar & house spreads.' }
-    ]
-  },
  {
-  id: 'sec-combos',
-  label: 'Orange Barbeque Combo Section',
-  img: 'assets/pages/combos.jpeg',
-  items: [
-    { id: 'rc-smoked-bbq-chicken-rice-bowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce.' },
+  id: "sec-club-sandwich",
+  label: "Club Sandwich Combo",
+  img: "assets/pages/club-sandwich.jpeg",
 
-    { id: 'rc-chicken-stroganoff-rice-combo', title: 'Chicken Stroganoff Rice Combo', price: 499, desc: 'Creamy chicken stroganoff, butter herb rice & garlic bread.' },
+  categories: [
 
-    { id: 'rc-grilled-chicken-steak-combo', title: 'Grilled Chicken Steak Combo', price: 549, desc: 'Herb grilled chicken, butter rice, vegetables & pepper sauce.' },
+    {
+      id: "club-combos",
+      title: "Club Sandwich Combos",
 
-    { id: 'rc-lemon-butter-fish-rice-combo', title: 'Lemon Butter Fish Rice Combo', price: 599, desc: 'Grilled fish, herb rice, vegetables & lemon butter sauce.' },
+      items: [
+        {
+          id: "classic-club",
+          title: "Classic Club Sandwich Combo",
+          price: 399,
+          desc: "Grilled chicken, egg, lettuce, tomato, cucumber, bacon & mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
+        },
+        {
+          id: "bbq-club",
+          title: "BBQ Club Sandwich Combo",
+          price: 429,
+          desc: "BBQ chicken, bacon, cheese, lettuce, tomato & mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
+        },
+        {
+          id: "spicy-club",
+          title: "Spicy Club Sandwich Combo",
+          price: 429,
+          desc: "Peri peri chicken, jalapeños, cheese, lettuce & spicy mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
+        }
+      ]
+    },
 
-    { id: 'rc-peri-peri-chicken-rice-combo', title: 'Peri-Peri Chicken Rice Combo', price: 499, desc: 'Peri-peri grilled chicken, spicy rice, coleslaw & garlic mayo.' },
+    {
+      id: "combo-includes",
+      title: "What's In Your Combo?",
 
-    { id: 'bc-chicken-stroganoff-bread-combo', title: 'Chicken Stroganoff Bread Combo', price: 499, desc: 'Creamy chicken stroganoff, garlic bread & fresh salad.' },
+      items: [
+        {
+          id: "club-sandwich",
+          title: "Club Sandwich",
+          price: null,
+          desc: "Triple layer grilled sandwich with chicken, egg, lettuce, tomato, cucumber, cheese, bacon & mayo."
+        },
+        {
+          id: "crispy-fries",
+          title: "Crispy Fries",
+          price: null,
+          desc: "Golden fries seasoned with our signature herbs & spices."
+        },
+        {
+          id: "coleslaw",
+          title: "Coleslaw",
+          price: null,
+          desc: "Fresh & crunchy coleslaw for the perfect balance."
+        },
+        {
+          id: "drink",
+          title: "Refreshing Drink",
+          price: null,
+          desc: "Your choice of any cooler or soft drink."
+        }
+      ]
+    },
 
-    { id: 'bc-grilled-chicken-garlic-bread', title: 'Grilled Chicken & Garlic Bread', price: 549, desc: 'Herb grilled chicken, garlic bread, vegetables & mushroom sauce.' },
+    {
+      id: "addons",
+      title: "Add-ons",
 
-    { id: 'bc-bbq-chicken-bread-basket', title: 'BBQ Chicken Bread Basket', price: 499, desc: 'Smoked BBQ chicken, garlic bread, fries & coleslaw.' },
+      items: [
+        {
+          id: "extra-cheese",
+          title: "Extra Cheese",
+          price: 40,
+          desc: "Add extra cheese."
+        },
+        {
+          id: "extra-chicken",
+          title: "Extra Chicken",
+          price: 60,
+          desc: "Additional grilled chicken."
+        },
+        {
+          id: "extra-bacon",
+          title: "Extra Bacon",
+          price: 50,
+          desc: "Additional crispy bacon."
+        },
+        {
+          id: "cold-coffee",
+          title: "Cold Coffee",
+          price: 70,
+          desc: "Fresh chilled cold coffee."
+        }
+      ]
+    }
 
-    { id: 'bc-fish-garlic-bread-combo', title: 'Fish & Garlic Bread Combo', price: 599, desc: 'Grilled fish, garlic bread, vegetables & tartar sauce.' },
+  ]
+},
+{
+  id: "sec-orange-combos",
+  label: "Orange Barbeque Combos",
+  img: "assets/pages/orange-combos.jpeg",
 
-    { id: 'bc-veg-continental-combo', title: 'Veg Continental Combo', price: 399, desc: 'Grilled vegetables, garlic bread, herb rice or mashed potato & mushroom sauce.' },
+  categories: [
 
-    { id: 'sp-orange-signature-smoke-combo', title: 'Orange Signature Smoke Combo', price: 699, desc: 'Grilled chicken, chicken stroganoff, butter herb rice, garlic bread, sautéed vegetables & two signature sauces.' },
+    {
+      id: "rice-combos",
+      title: "Rice Combos",
 
-    { id: 'sp-smoke-house-feast-serves-2', title: 'Smoke House Feast (Serves 2)', price: 1299, desc: 'BBQ chicken, grilled fish, herb rice, garlic bread, fries, salad & three signature sauces.' }
+      items: [
+        {
+          id: "smoked-bbq-chicken-rice-bowl",
+          title: "Smoked BBQ Chicken Rice Bowl",
+          price: 449,
+          desc: "Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce."
+        },
+        {
+          id: "chicken-stroganoff-rice",
+          title: "Chicken Stroganoff Rice Combo",
+          price: 499,
+          desc: "Creamy chicken stroganoff, butter herb rice & garlic bread."
+        },
+        {
+          id: "grilled-chicken-steak-combo",
+          title: "Grilled Chicken Steak Combo",
+          price: 549,
+          desc: "Herb grilled chicken, butter rice, vegetables & pepper sauce."
+        },
+        {
+          id: "lemon-butter-fish-rice",
+          title: "Lemon Butter Fish Rice Combo",
+          price: 599,
+          desc: "Grilled fish, herb rice, vegetables & lemon butter sauce."
+        },
+        {
+          id: "peri-peri-chicken-rice",
+          title: "Peri-Peri Chicken Rice Combo",
+          price: 499,
+          desc: "Peri-peri grilled chicken, spicy rice, coleslaw & garlic mayo."
+        }
+      ]
+    },
+
+    {
+      id: "bread-combos",
+      title: "Bread Combos",
+
+      items: [
+        {
+          id: "chicken-stroganoff-bread",
+          title: "Chicken Stroganoff Bread Combo",
+          price: 499,
+          desc: "Creamy chicken stroganoff, garlic bread & fresh salad."
+        },
+        {
+          id: "grilled-chicken-garlic-bread",
+          title: "Grilled Chicken & Garlic Bread",
+          price: 549,
+          desc: "Herb grilled chicken, garlic bread, vegetables & mushroom sauce."
+        },
+        {
+          id: "bbq-chicken-bread-basket",
+          title: "BBQ Chicken Bread Basket",
+          price: 499,
+          desc: "Smoked BBQ chicken, garlic bread, fries & coleslaw."
+        },
+        {
+          id: "fish-garlic-bread",
+          title: "Fish & Garlic Bread Combo",
+          price: 599,
+          desc: "Grilled fish, garlic bread, vegetables & tartar sauce."
+        },
+        {
+          id: "veg-continental-combo",
+          title: "Veg Continental Combo",
+          price: 399,
+          desc: "Grilled vegetables, garlic bread, herb rice or mashed potato & mushroom sauce."
+        }
+      ]
+    },
+
+    {
+      id: "signature-orange-specials",
+      title: "Signature Orange Specials",
+
+      items: [
+        {
+          id: "orange-signature-smoke-combo",
+          title: "Orange Signature Smoke Combo",
+          price: 699,
+          desc: "Grilled chicken, chicken stroganoff, butter herb rice, garlic bread, sautéed vegetables & two signature sauces."
+        },
+        {
+          id: "smoke-house-feast",
+          title: "Smoke House Feast (Serves 2)",
+          price: 1299,
+          desc: "BBQ chicken, grilled fish, herb rice, garlic bread, fries, salad & three signature sauces."
+        }
+      ]
+    }
+
   ]
 },
   {

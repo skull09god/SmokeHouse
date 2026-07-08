@@ -82,7 +82,7 @@ const menuSections = [
     id: 'sec-continental',
     label: 'Continental Menu',
     img: 'assets/pages/continental.jpeg',
-    
+    items: [
 
     {
       title: 'Salads',
@@ -176,6 +176,7 @@ const menuSections = [
 
     { id: 'cs-cold-coffee', title: 'Cold Coffee', price: 70, desc: 'Chilled creamy cold coffee served as an add-on beverage.' }
   ]
+    ]
   },
  {
   id: 'sec-combos',

@@ -69,339 +69,15 @@ const menuSections = [
     ]
   },
   {
-  id: "sec-pizza-burger",
-  label: "Pizza & Burger Menu",
-  img: "assets/pages/pizza.jpeg",
-
-  categories: [
-
-    {
-      id: "classic-pizzas",
-      title: "Classic Pizzas",
-
-      items: [
-        {
-          id: "margherita",
-          title: "Margherita",
-          price: {
-            regular: 299,
-            large: 499
-          },
-          desc: "Classic delight with fresh tomato sauce, mozzarella & basil."
-        },
-        {
-          id: "farmhouse",
-          title: "Farmhouse",
-          price: {
-            regular: 349,
-            large: 549
-          },
-          desc: "Capsicum, onion, mushroom, tomato, sweet corn & olives."
-        },
-        {
-          id: "paneer-tikka",
-          title: "Paneer Tikka",
-          price: {
-            regular: 399,
-            large: 599
-          },
-          desc: "Spicy paneer tikka, onion, capsicum, green chilli & cheese."
-        },
-        {
-          id: "chicken-tikka",
-          title: "Chicken Tikka",
-          price: {
-            regular: 449,
-            large: 649
-          },
-          desc: "Chicken tikka, onion, capsicum & mozzarella cheese."
-        },
-        {
-          id: "bbq-chicken-pizza",
-          title: "BBQ Chicken",
-          price: {
-            regular: 449,
-            large: 649
-          },
-          desc: "Grilled chicken, BBQ sauce, onion, capsicum & cheese."
-        },
-        {
-          id: "pepperoni",
-          title: "Pepperoni",
-          price: {
-            regular: 449,
-            large: 649
-          },
-          desc: "Classic pepperoni with mozzarella cheese."
-        }
-      ]
-    },
-
-    {
-      id: "premium-pizzas",
-      title: "Premium Pizzas",
-
-      items: [
-        {
-          id: "meat-lovers",
-          title: "Meat Lovers",
-          price: {
-            regular: 499,
-            large: 699
-          },
-          desc: "Chicken, pepperoni, mutton chunks, sausages & cheese."
-        },
-        {
-          id: "seafood-supreme",
-          title: "Seafood Supreme",
-          price: {
-            regular: 549,
-            large: 749
-          },
-          desc: "Prawns, calamari, fish, crab sticks, olives & cheese."
-        },
-        {
-          id: "exotic-veg",
-          title: "Exotic Veg",
-          price: {
-            regular: 449,
-            large: 649
-          },
-          desc: "Roasted bell peppers, zucchini, jalapeños, olives & feta cheese."
-        }
-      ]
-    },
-
-    {
-      id: "signature-burgers",
-      title: "Signature Burgers",
-
-      items: [
-        {
-          id: "orange-bbq-burger",
-          title: "Orange BBQ Burger",
-          price: 249,
-          desc: "Grilled chicken patty, BBQ sauce, cheese, onion rings, lettuce & mayo."
-        },
-        {
-          id: "cheese-burger",
-          title: "Cheese Burger",
-          price: 229,
-          desc: "Juicy chicken patty, cheese, lettuce, tomato, onion & burger mayo."
-        },
-        {
-          id: "spicy-peri-peri-burger",
-          title: "Spicy Peri Peri Burger",
-          price: 249,
-          desc: "Peri peri grilled patty, spicy mayo, lettuce, tomato & onion."
-        },
-        {
-          id: "crispy-chicken-burger",
-          title: "Crispy Chicken Burger",
-          price: 239,
-          desc: "Crispy fried chicken, lettuce, cheese, pickles & garlic mayo."
-        },
-        {
-          id: "veg-delight-burger",
-          title: "Veg Delight Burger",
-          price: 199,
-          desc: "Veg patty, lettuce, tomato, onion, cheese & burger mayo."
-        },
-        {
-          id: "double-decker-burger",
-          title: "Double Decker Burger",
-          price: 299,
-          desc: "Double chicken patty, cheese, lettuce, tomato, onion & special sauce."
-        }
-      ]
-    },
-
-    {
-      id: "burger-combos",
-      title: "Burger Combos",
-
-      items: [
-        {
-          id: "cheese-burger-combo",
-          title: "Cheese Burger Combo",
-          price: 299,
-          desc: "Cheese Burger + Fries + Drink."
-        },
-        {
-          id: "crispy-chicken-combo",
-          title: "Crispy Chicken Burger Combo",
-          price: 309,
-          desc: "Crispy Chicken Burger + Fries + Drink."
-        },
-        {
-          id: "peri-peri-combo",
-          title: "Spicy Peri Peri Burger Combo",
-          price: 319,
-          desc: "Spicy Peri Peri Burger + Fries + Drink."
-        },
-        {
-          id: "double-decker-combo",
-          title: "Double Decker Burger Combo",
-          price: 359,
-          desc: "Double Decker Burger + Fries + Drink."
-        }
-      ]
-    },
-
-    {
-      id: "extras",
-      title: "Extras",
-
-      items: [
-        {
-          id: "french-fries",
-          title: "French Fries",
-          price: 99,
-          desc: "Classic crispy french fries."
-        },
-        {
-          id: "cheesy-fries",
-          title: "Cheesy Fries",
-          price: 129,
-          desc: "French fries topped with melted cheese."
-        },
-        {
-          id: "onion-rings",
-          title: "Onion Rings (6 pcs)",
-          price: 99,
-          desc: "Crispy battered onion rings."
-        },
-        {
-          id: "chicken-nuggets",
-          title: "Chicken Nuggets (6 pcs)",
-          price: 129,
-          desc: "Golden fried chicken nuggets."
-        }
-      ]
-    },
-
-    {
-      id: "drinks",
-      title: "Drinks",
-
-      items: [
-        {
-          id: "pepsi",
-          title: "Pepsi / 7Up / Mirinda",
-          price: 59,
-          desc: "Soft drink."
-        },
-        {
-          id: "fresh-lime",
-          title: "Fresh Lime Soda",
-          price: 79,
-          desc: "Refreshing lime soda."
-        },
-        {
-          id: "iced-tea",
-          title: "Iced Tea (Peach/Lemon)",
-          price: 79,
-          desc: "Chilled flavoured iced tea."
-        },
-        {
-          id: "mineral-water",
-          title: "Mineral Water",
-          price: 29,
-          desc: "Packaged drinking water."
-        }
-      ]
-    },
-
-    {
-      id: "addons",
-      title: "Add-ons",
-
-      items: [
-        {
-          id: "extra-cheese",
-          title: "Extra Cheese",
-          price: 60,
-          desc: "Add extra cheese."
-        },
-        {
-          id: "chicken-tikka-addon",
-          title: "Chicken Tikka",
-          price: 80,
-          desc: "Additional chicken tikka topping."
-        },
-        {
-          id: "paneer-tikka-addon",
-          title: "Paneer Tikka",
-          price: 70,
-          desc: "Additional paneer tikka topping."
-        },
-        {
-          id: "pepperoni-addon",
-          title: "Pepperoni (6 pcs)",
-          price: 70,
-          desc: "Extra pepperoni slices."
-        },
-        {
-          id: "olives-addon",
-          title: "Olives",
-          price: 40,
-          desc: "Fresh olives."
-        },
-        {
-          id: "mushroom-addon",
-          title: "Mushroom",
-          price: 40,
-          desc: "Fresh mushroom topping."
-        },
-        {
-          id: "jalapenos-addon",
-          title: "Jalapeños",
-          price: 30,
-          desc: "Spicy jalapeño slices."
-        }
-      ]
-    },
-
-    {
-      id: "sauces",
-      title: "Sauces",
-
-      items: [
-        {
-          id: "peri-peri-sauce",
-          title: "Peri Peri Sauce",
-          price: null,
-          desc: "Signature peri peri dip."
-        },
-        {
-          id: "garlic-sauce",
-          title: "Garlic Sauce",
-          price: null,
-          desc: "Creamy garlic dip."
-        },
-        {
-          id: "bbq-sauce",
-          title: "BBQ Sauce",
-          price: null,
-          desc: "Smoky barbecue sauce."
-        },
-        {
-          id: "cheesy-dip",
-          title: "Cheesy Dip",
-          price: null,
-          desc: "Creamy cheese dip."
-        },
-        {
-          id: "tomato-ketchup",
-          title: "Tomato Ketchup",
-          price: null,
-          desc: "Classic tomato ketchup."
-        }
-      ]
-    }
-
-  ]
-},
+    id: 'sec-pizza-burger',
+    label: 'Pizzas & Burgers',
+    img: 'assets/pages/pizza.jpeg',
+    items: [
+      { id: 'pz-margherita', title: 'Classic Margherita Pizza (Regular)', price: 299, desc: 'Woodfired fresh tomato baseline sauce layout loaded heavily with artisanal mozzarella & fresh basil.' },
+      { id: 'pz-bbqchick', title: 'BBQ Chicken Pizza (Large)', price: 649, desc: 'House smoked tender chicken chunks, red onions, grilled capsicum over premium sweet BBQ baseline drizzle.' },
+      { id: 'bg-orange', title: 'Orange Special BBQ Burger', price: 249, desc: 'Seared chicken patty, crispy fried onion rings layer, melted cheddar slice, house signature master sauce.' }
+    ]
+  },
   {
     id: 'sec-continental',
     label: 'Continental Menu',
@@ -411,208 +87,43 @@ const menuSections = [
       { id: 'cn-steak', title: 'Grilled Chicken with Herb Sauce', price: 449, desc: 'Juicy skillet grilled breast fillet served with dynamic seasonal vegetables side & rich herb emulsion.' }
     ]
   },
+  {
+    id: 'sec-sandwiches',
+    label: 'Club Sandwiches',
+    img: 'assets/pages/combo.jpeg',
+    items: [
+      { id: 'sd-classic', title: 'Classic Club Sandwich Combo', price: 399, desc: 'Triple decker toast stuffed with chicken salad, fried egg, lettuce, tomato & mayo. Includes fries + drink.' },
+      { id: 'sd-bbq', title: 'BBQ Club Sandwich Combo', price: 429, desc: 'Smoked hickory BBQ shredded chicken chunks layered with crisp hickory bacon, cheddar & house spreads.' }
+    ]
+  },
  {
-  id: "sec-club-sandwich",
-  label: "Club Sandwich Combo",
-  img: "assets/pages/club-sandwich.jpeg",
+  id: 'sec-combos',
+  label: 'Orange Barbeque Combo Section',
+  img: 'assets/pages/combos.jpeg',
+  items: [
+    { id: 'rc-smoked-bbq-chicken-rice-bowl', title: 'Smoked BBQ Chicken Rice Bowl', price: 449, desc: 'Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce.' },
 
-  categories: [
+    { id: 'rc-chicken-stroganoff-rice-combo', title: 'Chicken Stroganoff Rice Combo', price: 499, desc: 'Creamy chicken stroganoff, butter herb rice & garlic bread.' },
 
-    {
-      id: "club-combos",
-      title: "Club Sandwich Combos",
+    { id: 'rc-grilled-chicken-steak-combo', title: 'Grilled Chicken Steak Combo', price: 549, desc: 'Herb grilled chicken, butter rice, vegetables & pepper sauce.' },
 
-      items: [
-        {
-          id: "classic-club",
-          title: "Classic Club Sandwich Combo",
-          price: 399,
-          desc: "Grilled chicken, egg, lettuce, tomato, cucumber, bacon & mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
-        },
-        {
-          id: "bbq-club",
-          title: "BBQ Club Sandwich Combo",
-          price: 429,
-          desc: "BBQ chicken, bacon, cheese, lettuce, tomato & mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
-        },
-        {
-          id: "spicy-club",
-          title: "Spicy Club Sandwich Combo",
-          price: 429,
-          desc: "Peri peri chicken, jalapeños, cheese, lettuce & spicy mayo. Served with crispy fries, fresh coleslaw and a refreshing drink."
-        }
-      ]
-    },
+    { id: 'rc-lemon-butter-fish-rice-combo', title: 'Lemon Butter Fish Rice Combo', price: 599, desc: 'Grilled fish, herb rice, vegetables & lemon butter sauce.' },
 
-    {
-      id: "combo-includes",
-      title: "What's In Your Combo?",
+    { id: 'rc-peri-peri-chicken-rice-combo', title: 'Peri-Peri Chicken Rice Combo', price: 499, desc: 'Peri-peri grilled chicken, spicy rice, coleslaw & garlic mayo.' },
 
-      items: [
-        {
-          id: "club-sandwich",
-          title: "Club Sandwich",
-          price: null,
-          desc: "Triple layer grilled sandwich with chicken, egg, lettuce, tomato, cucumber, cheese, bacon & mayo."
-        },
-        {
-          id: "crispy-fries",
-          title: "Crispy Fries",
-          price: null,
-          desc: "Golden fries seasoned with our signature herbs & spices."
-        },
-        {
-          id: "coleslaw",
-          title: "Coleslaw",
-          price: null,
-          desc: "Fresh & crunchy coleslaw for the perfect balance."
-        },
-        {
-          id: "drink",
-          title: "Refreshing Drink",
-          price: null,
-          desc: "Your choice of any cooler or soft drink."
-        }
-      ]
-    },
+    { id: 'bc-chicken-stroganoff-bread-combo', title: 'Chicken Stroganoff Bread Combo', price: 499, desc: 'Creamy chicken stroganoff, garlic bread & fresh salad.' },
 
-    {
-      id: "addons",
-      title: "Add-ons",
+    { id: 'bc-grilled-chicken-garlic-bread', title: 'Grilled Chicken & Garlic Bread', price: 549, desc: 'Herb grilled chicken, garlic bread, vegetables & mushroom sauce.' },
 
-      items: [
-        {
-          id: "extra-cheese",
-          title: "Extra Cheese",
-          price: 40,
-          desc: "Add extra cheese."
-        },
-        {
-          id: "extra-chicken",
-          title: "Extra Chicken",
-          price: 60,
-          desc: "Additional grilled chicken."
-        },
-        {
-          id: "extra-bacon",
-          title: "Extra Bacon",
-          price: 50,
-          desc: "Additional crispy bacon."
-        },
-        {
-          id: "cold-coffee",
-          title: "Cold Coffee",
-          price: 70,
-          desc: "Fresh chilled cold coffee."
-        }
-      ]
-    }
+    { id: 'bc-bbq-chicken-bread-basket', title: 'BBQ Chicken Bread Basket', price: 499, desc: 'Smoked BBQ chicken, garlic bread, fries & coleslaw.' },
 
-  ]
-},
-{
-  id: "sec-orange-combos",
-  label: "Orange Barbeque Combos",
-  img: "assets/pages/orange-combos.jpeg",
+    { id: 'bc-fish-garlic-bread-combo', title: 'Fish & Garlic Bread Combo', price: 599, desc: 'Grilled fish, garlic bread, vegetables & tartar sauce.' },
 
-  categories: [
+    { id: 'bc-veg-continental-combo', title: 'Veg Continental Combo', price: 399, desc: 'Grilled vegetables, garlic bread, herb rice or mashed potato & mushroom sauce.' },
 
-    {
-      id: "rice-combos",
-      title: "Rice Combos",
+    { id: 'sp-orange-signature-smoke-combo', title: 'Orange Signature Smoke Combo', price: 699, desc: 'Grilled chicken, chicken stroganoff, butter herb rice, garlic bread, sautéed vegetables & two signature sauces.' },
 
-      items: [
-        {
-          id: "smoked-bbq-chicken-rice-bowl",
-          title: "Smoked BBQ Chicken Rice Bowl",
-          price: 449,
-          desc: "Grilled BBQ chicken, butter herb rice, sautéed vegetables & BBQ sauce."
-        },
-        {
-          id: "chicken-stroganoff-rice",
-          title: "Chicken Stroganoff Rice Combo",
-          price: 499,
-          desc: "Creamy chicken stroganoff, butter herb rice & garlic bread."
-        },
-        {
-          id: "grilled-chicken-steak-combo",
-          title: "Grilled Chicken Steak Combo",
-          price: 549,
-          desc: "Herb grilled chicken, butter rice, vegetables & pepper sauce."
-        },
-        {
-          id: "lemon-butter-fish-rice",
-          title: "Lemon Butter Fish Rice Combo",
-          price: 599,
-          desc: "Grilled fish, herb rice, vegetables & lemon butter sauce."
-        },
-        {
-          id: "peri-peri-chicken-rice",
-          title: "Peri-Peri Chicken Rice Combo",
-          price: 499,
-          desc: "Peri-peri grilled chicken, spicy rice, coleslaw & garlic mayo."
-        }
-      ]
-    },
-
-    {
-      id: "bread-combos",
-      title: "Bread Combos",
-
-      items: [
-        {
-          id: "chicken-stroganoff-bread",
-          title: "Chicken Stroganoff Bread Combo",
-          price: 499,
-          desc: "Creamy chicken stroganoff, garlic bread & fresh salad."
-        },
-        {
-          id: "grilled-chicken-garlic-bread",
-          title: "Grilled Chicken & Garlic Bread",
-          price: 549,
-          desc: "Herb grilled chicken, garlic bread, vegetables & mushroom sauce."
-        },
-        {
-          id: "bbq-chicken-bread-basket",
-          title: "BBQ Chicken Bread Basket",
-          price: 499,
-          desc: "Smoked BBQ chicken, garlic bread, fries & coleslaw."
-        },
-        {
-          id: "fish-garlic-bread",
-          title: "Fish & Garlic Bread Combo",
-          price: 599,
-          desc: "Grilled fish, garlic bread, vegetables & tartar sauce."
-        },
-        {
-          id: "veg-continental-combo",
-          title: "Veg Continental Combo",
-          price: 399,
-          desc: "Grilled vegetables, garlic bread, herb rice or mashed potato & mushroom sauce."
-        }
-      ]
-    },
-
-    {
-      id: "signature-orange-specials",
-      title: "Signature Orange Specials",
-
-      items: [
-        {
-          id: "orange-signature-smoke-combo",
-          title: "Orange Signature Smoke Combo",
-          price: 699,
-          desc: "Grilled chicken, chicken stroganoff, butter herb rice, garlic bread, sautéed vegetables & two signature sauces."
-        },
-        {
-          id: "smoke-house-feast",
-          title: "Smoke House Feast (Serves 2)",
-          price: 1299,
-          desc: "BBQ chicken, grilled fish, herb rice, garlic bread, fries, salad & three signature sauces."
-        }
-      ]
-    }
-
+    { id: 'sp-smoke-house-feast-serves-2', title: 'Smoke House Feast (Serves 2)', price: 1299, desc: 'BBQ chicken, grilled fish, herb rice, garlic bread, fries, salad & three signature sauces.' }
   ]
 },
   {

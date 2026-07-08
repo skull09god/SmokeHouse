@@ -82,7 +82,7 @@ const menuSections = [
     id: 'sec-continental',
     label: 'Continental Menu',
     img: 'assets/pages/continental.jpeg',
-    sections: [
+    
 
     {
       title: 'Salads',
@@ -156,8 +156,6 @@ const menuSections = [
         { id: 'ds-cheesecake', title: 'New York Cheesecake with Berry Compote', price: 199, desc: 'Creamy cheesecake topped with berry compote.' }
       ]
     }
-
-  ]
   },
   {
     id: 'sec-sandwiches',

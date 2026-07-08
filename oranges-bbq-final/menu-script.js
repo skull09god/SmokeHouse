@@ -100,7 +100,7 @@ const menuSections = [
     items: [
       { id: 'mk-mojito', title: 'Virgin Mojito', price: 149, desc: 'Classic mojito with mint,lime,soda and a touch of sweetness.' },
       { id: 'mk-strawberry', title: 'Strawberry Lemonade', price: 149, desc: 'A sweet blend of strawberry,lemon,and a splash of soda.' },
-      { id: 'mk-tropical', title: 'Tropical Passion', price: 149, desc: 'Atropical mix of orange, pineapple,passion fruit and line.' },
+      { id: 'mk-tropical', title: 'Tropical Passion', price: 159, desc: 'Atropical mix of orange, pineapple,passion fruit and line.' },
       { id: 'mk-blue', title: 'Blue Lagoon ', price: 149, desc: 'A refreshing blue curacao mix with lemon and soda.' },
       { id: 'mk-apple', title: 'Green Apple Cooler', price: 149, desc: 'Crisp green apple syrup with lime and mint , cool & refreshing.' },
       { id: 'mk-watermelon', title: 'Watermelon Fizz', price: 149, desc: 'Fresh watermelon juice with lime and a splash of soda.' },

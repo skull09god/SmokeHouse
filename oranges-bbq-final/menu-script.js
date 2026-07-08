@@ -46,11 +46,7 @@ const menuSections = [
     { id: 'sf-extra-tartar-sauce', title: 'Extra Tartar Sauce', price: 49, desc: 'Creamy tartar dipping sauce.' },
     { id: 'sf-extra-rice', title: 'Extra Rice', price: 99, desc: 'Steamed rice.' },
 
-    // Dips & Sauces
-    { id: 'sf-tartar-sauce', title: 'Tartar Sauce', price: 0, desc: 'Classic tartar dipping sauce.' },
-    { id: 'sf-garlic-mayo', title: 'Garlic Mayo', price: 0, desc: 'Creamy garlic mayonnaise.' },
-    { id: 'sf-peri-peri-sauce', title: 'Peri Peri Sauce', price: 0, desc: 'Spicy peri peri sauce.' },
-    { id: 'sf-sweet-chilli-sauce', title: 'Sweet Chilli Sauce', price: 0, desc: 'Sweet & spicy chilli sauce.' }
+    
 
   ]
   },

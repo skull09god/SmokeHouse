@@ -16,54 +16,6 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
 }
 
-/* DOOR OPENING */
-.door-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 1200;
-  background: #070101;
-  transition: opacity .45s ease, visibility .45s ease;
-}
-.door {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-image: url('./assets/Background.png');
-  background-repeat: no-repeat;
-  background-size: 200% 100%;
-  transition: transform .12s linear;
-  will-change: transform;
-}
-.door-left { left: 0; background-position: left center; }
-.door-right { right: 0; background-position: right center; }
-.scroll-text {
-  position: fixed;
-  bottom: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1210;
-  text-align: center;
-  color: white;
-  letter-spacing: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.scroll-text span { display: block; color: var(--ember); font-size: 28px; margin-top: 8px; }
-body.entered .door-section { opacity: 0; visibility: hidden; pointer-events: none; }
-body:not(.entered) .door-section { opacity: 1; visibility: visible; pointer-events: auto; }
-body.entered .scroll-text { opacity: 0; visibility: hidden; }
-
-.door-scroll-space {
-  height: var(--door-open-distance);
-  background: #070101;
-}
-
 /* HOME */
 .home-section {
   position: relative;
@@ -81,7 +33,7 @@ body.entered .scroll-text { opacity: 0; visibility: hidden; }
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .6s ease;
 }
 .video-overlay {
@@ -91,7 +43,7 @@ body.entered .scroll-text { opacity: 0; visibility: hidden; }
     radial-gradient(circle at 78% 28%, rgba(255,60,18,.22), transparent 28%),
     linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.48), rgba(0,0,0,.82));
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .6s ease;
 }
 .home-content {
@@ -104,7 +56,7 @@ body.entered .scroll-text { opacity: 0; visibility: hidden; }
   justify-content: center;
   align-items: flex-start;
   color: #fff;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .6s ease;
 }
 .home-content .small-title,
@@ -145,13 +97,6 @@ body.entered .scroll-text { opacity: 0; visibility: hidden; }
 .text-link:hover { background: #fff; color: #080101; transform: translateY(-3px); }
 .home-buttons .outline-btn,
 .cta-buttons .outline-btn { background: transparent; border: 1px solid rgba(255,255,255,.85); }
-body.entered .bg-video,
-body.entered .video-overlay,
-body.entered .home-content { opacity: 1; }
-body:not(.entered) .bg-video,
-body:not(.entered) .video-overlay,
-body:not(.entered) .home-content { opacity: 0; }
-
 /* STORY INTRO */
 .story-intro-section {
   position: relative;

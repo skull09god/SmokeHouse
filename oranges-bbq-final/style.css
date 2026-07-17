@@ -299,6 +299,259 @@ body {
 .signature-card h3 { font-size: 25px; margin-bottom: 12px; }
 .signature-card p { color: #6b5043; line-height: 1.7; font-size: 15px; }
 
+/* ===========================
+   REVIEWS SECTION
+=========================== */
+
+.reviews-section {
+    padding: 100px 60px;
+    background: linear-gradient(180deg, #160705 0%, #080101 100%);
+}
+
+.love-container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    color: var(--ember-soft);
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(36px,4vw,56px);
+    color: var(--cream);
+    margin: 12px 0 18px;
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Grid */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+/* Card */
+
+.review-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,122,45,0.22);
+    border-radius: 24px;
+    padding: 28px;
+    backdrop-filter: blur(8px);
+    transition: .35s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--ember);
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+}
+
+/* Featured Review */
+
+.featured-review {
+    grid-column: span 2;
+    background: linear-gradient(135deg,#ff5a1f,#d22b08);
+    color: #fff;
+    border: none;
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: .9rem;
+    color: rgba(255,255,255,.65);
+}
+
+.review-card:not(.featured-review) .review-top {
+    color: #c8b6a8;
+}
+
+.stars {
+    color: #FFD166;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.review-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.featured-review p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.review-card h3 {
+    margin-top: 24px;
+    color: var(--cream);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.featured-review h3 {
+    color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width:992px){
+
+    .review-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .featured-review{
+        grid-column:span 2;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .reviews-section{
+        padding:70px 20px;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-review{
+        grid-column:span 1;
+    }
+
+    .section-heading h2{
+        font-size:38px;
+    }
+
+}
+
+
+/* ==========================
+   GOOGLE MAP SECTION
+========================== */
+
+.map-section{
+    padding:90px 60px;
+    background:linear-gradient(180deg,#fff6ec,#fffaf5);
+    color:#281208;
+}
+
+.map-content{
+    max-width:1180px;
+    margin:0 auto 45px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.map-content h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(36px,4vw,54px);
+    margin:12px 0;
+    color:#281208;
+}
+
+.map-content p{
+    color:#6e5543;
+    font-size:17px;
+    line-height:1.8;
+    max-width:620px;
+}
+
+.eyebrow1{
+    color:var(--ember);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    font-weight:700;
+}
+
+.menu-link{
+    display:inline-block;
+    padding:15px 32px;
+    border-radius:50px;
+    background:var(--ember);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s ease;
+    white-space:nowrap;
+}
+
+.menu-link:hover{
+    background:#111;
+    transform:translateY(-4px);
+}
+
+.map-box{
+    max-width:1180px;
+    height:500px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:28px;
+    border:8px solid #fff;
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.map-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .map-section{
+        padding:70px 20px;
+    }
+
+    .map-content{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .map-content h2{
+        font-size:38px;
+    }
+
+    .menu-link{
+        width:100%;
+        text-align:center;
+    }
+
+    .map-box{
+        height:350px;
+    }
+}
+
+
 /* CTA */
 .cta-section {
   position: relative;
